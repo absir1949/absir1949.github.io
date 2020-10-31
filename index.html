@@ -1,121 +1,1254 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Gridea</title>
-<link rel="shortcut icon" href="https://absir.me/favicon.ico?v=1604106803807">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://absir.me/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Gridea - Atom Feed" href="https://absir.me/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+<head>
+  <meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords" content="AB先生">
+<meta name="description" content="一个产品人，学习者。">
+<meta name="theme-color" content="#000">
+<title>AB先生说</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1604131318681">
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="stylesheet" href="/media/css/pisces.css">
+
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link
+  href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+  rel="stylesheet" type="text/css">
+
+<link href="/media/hljs/styles/androidstudio.css"
+  rel="stylesheet">
+
+<script src="/media/hljs/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 
 
-    <meta name="description" content="温故而知新" />
-  </head>
-  <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://absir.me">
-  <img class="avatar" src="https://absir.me/images/avatar.png?v=1604106803807" alt="">
-  </a>
-  <h1 class="site-title">
-    Gridea
-  </h1>
-  <p class="site-description">
-    温故而知新
-  </p>
-  <div class="menu-container">
+</head>
+
+<body>
+  <div class="head-top-line"></div>
+  <div class="header-box">
     
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
+<div class="pisces">
+  <header class="header  ">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>AB先生说</span>
+            </a>  
+          
+        </div>
+        
+          <p class="subtitle">一位产品人，学习者</p>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            
+            
+              
+            
+            <li class="nav-item nav-item-active">
+              
+              
+                <a href="/" target="_self">
+                  <i class="fa fa-home"></i> 首页
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/archives/" target="_self">
+                  <i class="fa fa-archive"></i> 归档
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/tags/" target="_self">
+                  <i class="fa fa-tags"></i> 标签
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/post/about/" target="_self">
+                  <i class="fa fa-user"></i> 关于
+                </a>
+              
+            </li>
+          
+          
+            
+              <li class="nav-item ">
+                <a href="/friends/" target="_self">
+                  
+                    <i class="fa fa-address-book"></i> 友情链接
+                  
+                </a>
+              </li>
+            
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
 </div>
 
-    
-        <div class="post-container">
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
   
-    <article class="post">
-      <a href="https://absir.me/post/hello-gridea/">
-        <h2 class="post-title">Hello Gridea</h2>
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+  </div>
+  <div class="main-continer">
+    
+    <div
+      class="section-layout pisces ">
+      <div class="section-layout-wrapper">
+        <div id="sidebarMeta" class="sidebar">
+    
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="/images/avatar.png"/>
+    <p class="site-author-name">适用 Gemini,Pisces 布局,版权说明需配置</p>
+    
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">5</span>
+        <span class="site-item-stat-name">文章</span>
       </a>
-      <div class="post-info">
-        <span>
-          2018-12-12
-        </span>
-        <span>
-          2 min read
-        </span>
-        
-          <a href="https://absir.me/tag/KtT9ZseOj/" class="post-tag">
-            # Gridea
-          </a>
-        
-      </div>
-      
-        <a href="https://absir.me/post/hello-gridea/" class="post-feature-image" style="background-image: url('https://absir.me/post-images/hello-gridea.png')">
-        </a>
-      
-      <div class="post-abstract">
-        <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-
-      </div>
-    </article>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">4</span>
+        <span class="site-item-stat-name">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">4</span>
+        <span class="site-item-stat-name">标签</span>
+      </a>
+    </div>
+  </div>
   
-</div>
-
     
-        <div class="pagination-container">
-  
-  
-</div>
-
+      <div class="sidebar-item">
+        <span class="site-item-rss">
+            <i class="fa fa-rss"></i>
+            <a href="https://absir.me/atom.xml" target="_blank">RSS</a>
+        </span>
+      </div>
     
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-  <a class="rss" href="https://absir.me/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
-</div>
-
+  
+  
+    <div class="sidebar-item sidebar-item-social">
+      <div class="social-item">
+        
+          
+            <a href="https://github.com/absir1949">
+              <i class="fa fa-github-alt" title="github"></i>
+            </a>
+          
+        
+        
       </div>
     </div>
-  </body>
+  
+
+
+</div>
+</div>
+<script>
+  let sidebarMeta = document.querySelector('#sidebarMeta');
+  let scheme = 'pisces';
+  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
+  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
+    document.addEventListener('scroll', function(e) {
+      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
+        sidebarWrapper.classList.add('home-sidebar-fixed')
+      } else {
+        sidebarWrapper.classList.remove('home-sidebar-fixed')
+      }
+    });
+  }
+  </script>
+        <div class="section-box pisces">
+          <section class="section bg-color posts-expand slide-down-in">
+            
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://absir.me/post/zhi-shi-de-bian-jiang-di-yi-pian-mian-xiang-dui-xiang-lai-tan-jiu-xi-tong-jie-gou/">
+      【知识的边疆】第一篇·面相对象来探究系统结构
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span>发布于</span>
+      <span>2016-05-28</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show">分类于</span>
+      
+      
+      <a href="https://absir.me/tag/SU95jTZp_y/">
+        <span>知识的疆域</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>6分钟</span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>1530<span class="pc-show">字数</span></span>
+    </span>
+    
+  </div>
+</header>
+      <div class="post-body">
+        
+        
+          <h2 id="前言">前言</h2>
+<blockquote>
+<p>此文章为《知识的边疆》系列第一篇文章。《知识的边疆》是我关于个人知识系统构建的主题文集。</p>
+</blockquote>
+
+        
+        
+        <div class="post-button text-center">
+          <a class="btn" href="https://absir.me/post/zhi-shi-de-bian-jiang-di-yi-pian-mian-xiang-dui-xiang-lai-tan-jiu-xi-tong-jie-gou/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://absir.me/post/guan-bi-peng-you-quan-shi-yi-chong-shi-me-yang-de-ti-yan/">
+      关闭朋友圈是一种什么样的体验？
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span>发布于</span>
+      <span>2016-04-02</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show">分类于</span>
+      
+      
+      <a href="https://absir.me/tag/KwW-xy5e3/">
+        <span>成长的疆域</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>7分钟</span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>1815<span class="pc-show">字数</span></span>
+    </span>
+    
+  </div>
+</header>
+      <div class="post-body">
+        
+        
+          <p>在今年2.18号，我突然关闭了微信朋友圈。截止到今日，朋友圈依旧处于关闭状态。当然，身边的朋友会质疑，你朋友圈不是有更新吗？是的，我仍然通过“分享到朋友圈”和“我的相册”入口发布内容（据统计,约关闭的近40天内发了近10条内容,远比之前每天1条的频率低多了）。</p>
+
+        
+        
+        <div class="post-button text-center">
+          <a class="btn" href="https://absir.me/post/guan-bi-peng-you-quan-shi-yi-chong-shi-me-yang-de-ti-yan/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://absir.me/post/pi-jiu-yu-niao-bu/">
+      啤酒与尿布
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span>发布于</span>
+      <span>2016-03-13</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show">分类于</span>
+      
+      
+      <a href="https://absir.me/tag/hdz3C1Aj8/">
+        <span>产品的疆域</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>6分钟</span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>1687<span class="pc-show">字数</span></span>
+    </span>
+    
+  </div>
+</header>
+      <div class="post-body">
+        
+        
+          <p>“啤酒与尿布”的故事诞生于20世纪90年代的美国沃尔玛超市，沃尔玛的超市管理人员分析销售数据事发现了一个令人难以理解的现象：在某些特定的情况下，啤酒与尿布这两件看上去毫无关系的商品会经常出现在同一个购物篮中，经过调查发现，这种现象出现在年轻的父亲身上。</p>
+
+        
+        
+        <div class="post-button text-center">
+          <a class="btn" href="https://absir.me/post/pi-jiu-yu-niao-bu/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://absir.me/post/yong-hu-ti-yan-zhen-de-chong-yao-ma/">
+      用户体验真的重要吗？
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span>发布于</span>
+      <span>2016-03-06</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show">分类于</span>
+      
+      
+      <a href="https://absir.me/tag/hdz3C1Aj8/">
+        <span>产品的疆域</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>6分钟</span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>1729<span class="pc-show">字数</span></span>
+    </span>
+    
+  </div>
+</header>
+      <div class="post-body">
+        
+        
+          <p>产品经理A:”我为追求极致的用户体验而生”。</p>
+<p>大佬B:”为了达到这个效果，我们修改了十几版设计图，像素追求达到毫米级”</p>
+<p>老板C:”把这个头像向右移2像素，等等，向左移动1像素..对,放大一点…”</p>
+<p>产品经理D:”没有好的用户体验，用户怎么会喜欢你的产品呢？”</p>
+
+        
+        
+        <div class="post-button text-center">
+          <a class="btn" href="https://absir.me/post/yong-hu-ti-yan-zhen-de-chong-yao-ma/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://absir.me/post/what-is-mangement/">
+      什么是管理
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span>发布于</span>
+      <span>2016-02-28</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show">分类于</span>
+      
+      
+      <a href="https://absir.me/tag/IeBC9X57b/">
+        <span>管理的疆域</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>5分钟</span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>1297<span class="pc-show">字数</span></span>
+    </span>
+    
+  </div>
+</header>
+      <div class="post-body">
+        
+        
+          <p><strong>管理就是解决资源的调配问题的一门学科。</strong> 我知道就这一句话回答完了你肯定不尽兴，下面我将从唯物史观的角度来聊一聊管理需求的演进。</p>
+<p>翻开一万年前的人类发展史，有人的地方，便会逐渐形成组织。有组织的地方，便需要管理。所以，从一定维度来说，管理发展史几乎与人类发展史同样漫长。</p>
+
+        
+        
+        <div class="post-button text-center">
+          <a class="btn" href="https://absir.me/post/what-is-mangement/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
+      
+    </div>
+  </article>
+  
+            
+            
+<div class="page bg-color">
+  <ul class="pagination-ul">
+    
+    
+      
+        <li class="pagination-li pagination-active">
+            <a href="/page/../">
+              1
+            </a>
+        </li>
+      
+    
+    
+  </ul>
+</div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="footer-box">
+  <footer class="footer">
+    <div class="copyright">
+    </div>
+    <div class="poweredby">
+      
+    </div>
+  </footer>
+  
+  
+  <div class="pisces back-to-top" id="back_to_top">
+    <i class="fa fa-arrow-up"></i>
+    
+    <span class="scrollpercent">
+      <span id="back_to_top_text">0</span>%
+    </span>
+    
+  </div>
+  
+  
+  
+</div>
+<script>
+
+  let sideBarOpen = 'sidebar-open';
+  let body = document.body;
+  let back2Top = document.querySelector('#back_to_top'),
+  back2TopText = document.querySelector('#back_to_top_text'),
+  drawerBox = document.querySelector('#drawer_box'),
+  rightSideBar = document.querySelector('.sidebar'),
+  viewport = document.querySelector('body');
+
+  function scrollAnimation(currentY, targetY) {
+   
+    let needScrollTop = targetY - currentY
+    let _currentY = currentY
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10)
+      _currentY += dist
+      window.scrollTo(_currentY, currentY)
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY)
+      } else {
+        window.scrollTo(_currentY, targetY)
+      }
+    }, 1)
+  }
+
+  back2Top.addEventListener("click", function(e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+  
+  window.addEventListener('scroll', function(e) {
+    let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
+      back2Top.classList.add('back-top-active');
+    }
+    if (percent == 0) {
+      back2Top.classList.remove('back-top-active');
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+  
+  let hasCacu = false;
+  window.onresize = function() {
+    if (window.width > 991) {
+      calcuHeight();
+    } else {
+      hasCacu = false;
+    }
+  }
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
+      let sideBar = document.querySelector('.sidebar');
+      let navUl = document.querySelector('#site_nav');
+      sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+  
+  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll('.right-motion');
+    let right = drawerBox.classList.contains('right');
+
+    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS 
+      };
+      closeProp = {
+        paddingRight: '0px'
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS 
+      };
+      closeProp = {
+        paddingLeft: '0px'
+      };
+    }
+
+    drawerBox.onclick = function() {
+      open = !open;
+      window.Velocity(rightSideBar, 'stop');
+      window.Velocity(viewport, 'stop');
+      window.Velocity(rightMotions, 'stop');
+      if (open) {
+        window.Velocity(rightSideBar, {
+          width: RIGHT_MOVE_DIS
+        }, {
+          duration: MOTION_TIME,
+          begin: function() {
+            window.Velocity(rightMotions, transitionDir,{ });
+          }
+        })
+        window.Velocity(viewport, openProp,{
+          duration: MOTION_TIME
+        });
+      } else {
+        window.Velocity(rightSideBar, {
+          width: '0px'
+        }, {
+          duration: MOTION_TIME,
+          begin: function() {
+            window.Velocity(rightMotions, {
+              opacity: 0
+            });
+          }
+        })
+        window.Velocity(viewport, closeProp ,{
+          duration: MOTION_TIME
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle('muse-line');
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    }
+  }
+
+  // 链接跳转
+  let newWindow = 'false'
+  if (newWindow === 'true') {
+    let links = document.querySelectorAll('.post-body a')
+    links.forEach(item => {
+      if (!item.classList.contains('btn')) {
+        item.setAttribute("target","_blank");
+      }
+    })
+  }
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+
+</script>
+    <div class="light-box" id="light_box"></div>
+<script>
+  let imgs = document.querySelectorAll('.post-body img');
+  let lightBox = document.querySelector('#light_box');
+  lightBox.addEventListener('mousedown', (e) => {
+    e.preventDefault()
+  })
+  lightBox.addEventListener('mousewheel', (e) => {
+    e.preventDefault()
+  })
+  let width = window.innerWidth * 0.8;
+  lightBox.onclick = () => {
+    let img = lightBox.querySelector('img');
+    lightBox.style = '';
+    img && img.remove();
+  }
+  imgs.forEach(item => {
+    item.onclick = function (e) {
+      let lightImg = document.createElement('img');
+      lightImg.src = this.src;
+      lightBox.style = `height: 100%; opacity: 1; background-color: rgba(0, 0, 0, 0.5);cursor: zoom-out;`;
+      lightImg.style = `width: ${width}px; border: 1px solid #fff; border-radius: 2px;`;
+      lightImg.onclick = function () {
+        lightBox.style = '';
+        this.remove();
+      }
+      lightBox.append(lightImg);
+    }
+  })
+</script>
+  </div>
+</body>
+<input hidden id="copy" />
+<script>
+  //拿来主义(真香)^_^，Clipboard 实现摘自掘金 https://juejin.im/post/5aefeb6e6fb9a07aa43c20af
+  window.Clipboard = (function (window, document, navigator) {
+    var textArea,
+      copy;
+
+    // 判断是不是ios端
+    function isOS() {
+      return navigator.userAgent.match(/ipad|iphone/i);
+    }
+    //创建文本元素
+    function createTextArea(text) {
+      textArea = document.createElement('textArea');
+      textArea.value = text;
+      textArea.style.width = 0;
+      textArea.style.height = 0;
+      textArea.clientHeight = 0;
+      textArea.clientWidth = 0;
+      document.body.appendChild(textArea);
+    }
+    //选择内容
+    function selectText() {
+      var range,
+        selection;
+
+      if (isOS()) {
+        range = document.createRange();
+        range.selectNodeContents(textArea);
+        selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        textArea.setSelectionRange(0, 999999);
+      } else {
+        textArea.select();
+      }
+    }
+
+    //复制到剪贴板
+    function copyToClipboard() {
+      try {
+        document.execCommand("Copy")
+      } catch (err) {
+        alert("复制错误！请手动复制！")
+      }
+      document.body.removeChild(textArea);
+    }
+
+    copy = function (text) {
+      createTextArea(text);
+      selectText();
+      copyToClipboard();
+    };
+
+    return {
+      copy: copy
+    };
+  })(window, document, navigator);
+
+  function copyCode(e) {
+    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
+      let code = e.currentTarget.querySelector('code');
+      var text = code.innerText;
+      if (e.srcElement.textContent === '复制成功') {
+        console.log('复制操作频率过高');
+        return;
+      }
+      e.srcElement.textContent = '复制成功';
+      (function (elem) {
+        setTimeout(() => {
+          if (elem.textContent === '复制成功') {
+            elem.textContent = '复制代码'
+          }
+        }, 1000);
+      })(e.srcElement)
+      Clipboard.copy(text);
+    }
+  }
+
+  let pres = document.querySelectorAll('pre');
+  pres.forEach(pre => {
+    let code = pre.querySelector('code');
+    let copyElem = document.createElement('span');
+    copyElem.classList.add('copy-code');
+    copyElem.textContent = '复制代码';
+    pre.appendChild(copyElem);
+    pre.onclick = copyCode
+  })
+</script>
+<script src="/media/js/motion.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 500
+  });
+</script>
+
+<!-- <div class="search-mask" id="search_mask">
+  <div class="search-box">
+    <div class="search-title">
+      <i class="fa fa-search"></i>
+      <div class="input-box">
+        <input type="text" placeholder="搜索">
+      </div>
+      <i class="fa fa-times-circle"></i>
+    </div>
+    <div class="result">
+      
+      <div class="item">
+        <a class="result-title" href="https://absir.me/post/about/"" data-c="
+          &lt;blockquote&gt;
+&lt;p&gt;欢迎来到我的小站呀，很高兴遇见你！🤝&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;关于本站&#34;&gt;🏠 关于本站&lt;/h2&gt;
+&lt;p&gt;想写啥写啥&lt;/p&gt;
+&lt;h2 id=&#34;博主是谁&#34;&gt;👨‍💻 博主是谁&lt;/h2&gt;
+&lt;p&gt;AB先生，一名产品人，学习者&lt;/p&gt;
+&lt;h2 id=&#34;兴趣爱好&#34;&gt;⛹ 兴趣爱好&lt;/h2&gt;
+&lt;h2 id=&#34;联系我呀&#34;&gt;📬 联系我呀&lt;/h2&gt;
+&lt;p&gt;E-Mail: lvtory@live.com&lt;/p&gt;
+">关于</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" href="https://absir.me/post/zhi-shi-de-bian-jiang-di-yi-pian-mian-xiang-dui-xiang-lai-tan-jiu-xi-tong-jie-gou/"" data-c="
+          &lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;此文章为《知识的边疆》系列第一篇文章。《知识的边疆》是我关于个人知识系统构建的主题文集。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;研究问题，先从上向下。再加上思路的整理以主旨问题提出与解决为主线，有不少好处。那么首先提出本文的主旨问题： &lt;strong&gt;我的PKS系统主要架构是什么？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如何解决这个问题？从程序员的思维出发，研究系统有两个思考方式。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;面向对象&lt;/li&gt;
+&lt;li&gt;面相过程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;那么为了推导系统，本文从面相对象来进行分析。既然是个人知识管理系统，那我们就围绕整个系统的核心：&lt;strong&gt;知识&lt;/strong&gt; 入手试试呗。&lt;/p&gt;
+&lt;h3 id=&#34;知识的前世今生&#34;&gt;知识的前世今生&lt;/h3&gt;
+&lt;p&gt;我将知识分成以下4个阶段:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;信息&lt;/li&gt;
+&lt;li&gt;知识&lt;/li&gt;
+&lt;li&gt;技能&lt;/li&gt;
+&lt;li&gt;才干&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;信息&#34;&gt;信息&lt;/h4&gt;
+&lt;p&gt;信息是知识的前世，比率时代，一切事务都朝着信息化的方向发展着。信息的价值化后就变成了知识。当然，有价值就意味着有主观，同样的信息，对一个人来说可能是信息，对另外一个人来说可能就是知识。信息是被知识被过滤之前的状态。&lt;/p&gt;
+&lt;h4 id=&#34;知识&#34;&gt;知识&lt;/h4&gt;
+&lt;p&gt;信息被价值过滤网过滤之后，有价值的部分转变成知识。这里有人会问，那我收藏在笔记软件中的那些没看过的文章，算是知识还是信息啊？我认为这依旧算信息，因为并没有进行知识化。&lt;/p&gt;
+&lt;h4 id=&#34;技能&#34;&gt;技能&lt;/h4&gt;
+&lt;p&gt;技能是知识的运用方式，我们大部分知识的实用价值在此体现。&lt;/p&gt;
+&lt;h4 id=&#34;才干&#34;&gt;才干&lt;/h4&gt;
+&lt;p&gt;知识、技能内化到思维中去，就变成了才干，它是一种真正的核心竞争力。&lt;/p&gt;
+&lt;h2 id=&#34;我的个人知识系统最简架构&#34;&gt;我的个人知识系统最简架构&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;http://upload-images.jianshu.io/upload_images/1069640-e2b5a259a208726d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;http://upload-images.jianshu.io/upload_images/1069640-d7f991a66262b9e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&#34; alt=&#34;img&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;我的个人知识系统主要由 &lt;strong&gt;知识化&lt;/strong&gt;、&lt;strong&gt;体系化&lt;/strong&gt;、&lt;strong&gt;价值化&lt;/strong&gt; 三个流程组成。通过这三个流程，完成 &lt;strong&gt;让信息变成知识&lt;/strong&gt;、&lt;strong&gt;知识融入体系&lt;/strong&gt;、&lt;strong&gt;知识/体系 价值转化&lt;/strong&gt;、&lt;strong&gt;价值萃取&lt;/strong&gt; 五个功能。&lt;/p&gt;
+&lt;h3 id=&#34;知识化&#34;&gt;知识化&lt;/h3&gt;
+&lt;p&gt;顾名思义，知识化就是将输入资源变成自己需要的知识。&lt;/p&gt;
+&lt;p&gt;知识化流程的输入：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;外界产生的（书籍、文章、演讲、资料等）&lt;/li&gt;
+&lt;li&gt;自己产生的（通过业务运用自己萃取的信息）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;知识化流程的输出：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;结构化知识（比如读书笔记、脑图、书评….）&lt;/li&gt;
+&lt;li&gt;零散性知识（比如片段摘抄、佳句等卡片级素材）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;体系化&#34;&gt;体系化&lt;/h3&gt;
+&lt;p&gt;体系化是指将知识化形成的知识整理进个人知识体系。&lt;/p&gt;
+&lt;p&gt;体系化流程的输入：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;结构化知识（比如读书笔记、脑图、书评….）&lt;/li&gt;
+&lt;li&gt;零散性知识（比如片段摘抄、佳句等卡片级素材）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;体系化流程的输出：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;个人知识体系&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;个人知识体系&#34;&gt;个人知识体系&lt;/h4&gt;
+&lt;p&gt;个人知识体系为外化的个人知识信息库，它存储着几乎所有的个人知识。而且在不断的更新和升级。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;这里有人会问，为什么是外化的？终极目标不是内化到大脑中吗？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;下面是我的回答。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我想从以下几点来谈谈我的想法。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;知识从外界到大脑之中，肯定有一个整理过程。&lt;/li&gt;
+&lt;li&gt;大脑如何更好的体系化？那就是写下来，写下来可以帮助澄清思路。&lt;/li&gt;
+&lt;li&gt;很多案例、素材、细节，我们大脑肯定是记不住的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;从以上三点出发，我的观点是最好在外界搭建一个个人知识体系。它帮助大脑更好的实现 整理、体系化、记住细节。&lt;/p&gt;
+&lt;p&gt;而且 大脑不可靠，不可靠的地方用外界科学的系统代替，也是一个趋势。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;综上，我个人认为，个人知识体系是外化的。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;你可以在这里同我讨论 &lt;a href=&#34;https://github.com/absir1949/PKS/issues/2&#34;&gt;【问题】为什么个人知识体系是外化的？而不是存储在大脑中的？&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我在这里提出 &lt;strong&gt;知识的三维结构模型&lt;/strong&gt;，从三个维度去描述知识。&lt;/p&gt;
+&lt;h4 id=&#34;广度结构&#34;&gt;广度结构&lt;/h4&gt;
+&lt;p&gt;广度结构，是指围绕一个知识点的横向延伸，比如关于一个名词，可以用5W2H来进行延伸。&lt;/p&gt;
+&lt;h4 id=&#34;深度结构&#34;&gt;深度结构&lt;/h4&gt;
+&lt;p&gt;纵向结构，是指围绕一个知识点的纵向延伸，这个知识可被归纳在哪个更高维度知识之下？可归纳那些更低维度知识？，可被什么知识所演绎？可演绎出什么知识？纵向结构是将知识条理化的重要手段。&lt;/p&gt;
+&lt;h4 id=&#34;高度结构&#34;&gt;高度结构&lt;/h4&gt;
+&lt;p&gt;高度结构，是最抽象的维度。不断抽象，必然会上升了个到哲学层面，比如电荷的正负、太极的阴阳，月亮的盈亏、有什么联系呢？它是将知识关联、打破边界的高阶手段，也是个人知识体系走向融会贯通的希冀之路。&lt;/p&gt;
+&lt;p&gt;从上面输出的分类可以看出来，我使用的是逻辑性的分类方式，为什么要使用逻辑呢？更好的逻辑结构方便个人知识体系的管理。如果是一个混沌的关联网状结构，管理成本是很高的。&lt;/p&gt;
+&lt;p&gt;因此，我的个人知识体系里面的知识包含三类:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;广度结构知识&lt;/li&gt;
+&lt;li&gt;深度结构知识&lt;/li&gt;
+&lt;li&gt;高度结构知识&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;此问题可以参于讨论 &lt;a href=&#34;https://github.com/absir1949/PKS/issues/4&#34;&gt;【问题】个人知识体系中主要结构是怎么样的？&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;价值化&#34;&gt;价值化&lt;/h3&gt;
+&lt;p&gt;价值化指将个人知识体系变现成价值的流程，是知识走向实用的方式。&lt;/p&gt;
+&lt;p&gt;价值化的流程的输入：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;知识化流程输出的知识&lt;/li&gt;
+&lt;li&gt;个人知识体系&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;价值化流程的输出：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通过知识外显化转变成文章、图书、演讲、培训、咨询、谈资等&lt;/li&gt;
+&lt;li&gt;通过知识内隐化转变成才干、技能&lt;/li&gt;
+&lt;li&gt;通过在实际的业务中运用知识获得提升。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;总结&#34;&gt;总结&lt;/h3&gt;
+&lt;p&gt;这就是用面相对象方法，来思考我的个人知识管理系统架构得出的答案。&lt;/p&gt;
+">【知识的边疆】第一篇·面相对象来探究系统结构</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" href="https://absir.me/post/guan-bi-peng-you-quan-shi-yi-chong-shi-me-yang-de-ti-yan/"" data-c="
+          &lt;p&gt;在今年2.18号，我突然关闭了微信朋友圈。截止到今日，朋友圈依旧处于关闭状态。当然，身边的朋友会质疑，你朋友圈不是有更新吗？是的，我仍然通过“分享到朋友圈”和“我的相册”入口发布内容（据统计,约关闭的近40天内发了近10条内容,远比之前每天1条的频率低多了）。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h4 id=&#34;我现在使用朋友圈的姿势&#34;&gt;我现在使用朋友圈的姿势&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;转载我微信公众号的文章&lt;/li&gt;
+&lt;li&gt;转载极度想给朋友们分享的文章&lt;/li&gt;
+&lt;li&gt;发布增强个人影响力的内容&lt;/li&gt;
+&lt;li&gt;极力避免发布无聊的、炫耀的、负面的、刷存在感的内容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;关闭朋友圈是一时兴起,并未逐条罗列优劣、深思熟虑之后签下了“关闭朋友圈书“，是关闭了之后慢慢体会了诸多好处，然后“逆向合理化”出了很多原因。&lt;/p&gt;
+&lt;h4 id=&#34;首先回答我为什么要关闭朋友圈&#34;&gt;首先回答，我为什么要关闭朋友圈？&lt;/h4&gt;
+&lt;h5 id=&#34;内部原因&#34;&gt;内部原因&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;减少注意力分散&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;现代社会信息越来越多，我们一天接收到的消息可能比爷爷辈的人一个月接触的消息都多，同样的一天24个小时，可是有更多的信息分散我们的注意力，同时信息也符合二八定律，我们一天接触的消息80%都是对于我们无益的，只有20的信息是有益的，通过限制信息输入通道，过滤垃圾信息，让我们的注意力可以更加专注在必要的地方。所以，关闭朋友圈，同我将微博关注缩减了近一半，将订阅的rss缩减到每天20min可以看完，关闭微信消息通知等做法，都是一种减少注意力分散的方法而已。&lt;/p&gt;
+&lt;p&gt;朋友圈的新评论提醒无法关闭，每次打开看到有新评论总是止不住的好奇心立即点开，而且发完了朋友圈心理痒痒的总随时关注着，一直想着，谁会点赞，谁会评论。这对注意力的消耗也比较大。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;减弱对个人存在感的关注&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;曾经努力探究一个答案。为什么人要社交？最后努力找到一个我认为最好的答案：为了防止被遗忘。存在感是证明人活着这个世界上的间接证据，是为了满足人的精神需求层次中的社会需求。&lt;/p&gt;
+&lt;p&gt;等等，为什么我要靠这种间接证据去证明我活在了这个世界上？为什么要证明我曾经活在了世上？为什么我需要给别人刷存在感？一人一世界，我真真实实，彻彻底底地存在我的世界。这就是我的、真实的世界了。&lt;/p&gt;
+&lt;p&gt;人皆渺小，无论是伟大的爱因斯坦，还是街边的一个无人知晓、穷困潦倒的乞丐，从广义的视角来看，他们在浩瀚的宇宙中，都是两个极小的尘埃，都是一样微不足道的存在。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;将个人存在感从向外探寻转而内心求法，是提升“个人存在感”的最有效途径。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这里或许会有人反驳，你这不是切切实实的唯心主义么？这完全是个人对外掌控能力弱的体现！你这不是鼓励人们只活在内心世界吗？&lt;/p&gt;
+&lt;p&gt;我想说，存在感不是一个证明题，而是一个主观题。首先认识到自己泯然众人，然后其实并没有什么人关注你到底今天吃了什么，去哪里玩了，心情好不好。而是我们自己清楚的认识到自己今天吃了什么，去哪里玩了，心情好不好。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你是选择，为自己存在，还是，为别人存在？&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;减弱个人炫耀心理&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我有时会有炫耀的行为(没有对自己贴标签是怕皮格马利翁效应)，做出了一点点成就，就喜欢让别人觉得自己好牛逼，赶快发个朋友圈晒一晒，看到大片的赞和评论，虚荣心将得到极大的满足。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;真正的强者，不是因为外界认同，而是因为自我认同&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;所以关闭朋友圈，减少一条炫耀的途径，来减少个人的炫耀心理，控制对外发声的途径，也没啥不好的啊。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;外部原因&#34;&gt;外部原因&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;朋友圈信息营养低&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;自拍、微商、鸡汤、大餐、段子、广告、敬业 各种信息含金量真是非常非常….&lt;/p&gt;
+&lt;p&gt;这就是生活啊！真真实实的生活啊！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;朋友圈对我并没有什么意义&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我将使用朋友圈的意义分成下面几种:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;结交人脉&lt;/li&gt;
+&lt;li&gt;吸引配偶&lt;/li&gt;
+&lt;li&gt;维持关系&lt;/li&gt;
+&lt;li&gt;满足自己&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但是这些目的是不是不用朋友圈就不行呢？通通电话，聊聊天，约出来喝杯茶，会不会更加有效呢！&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;人际关系，不是点赞之交&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;然后回答关闭朋友圈我获得了什么体验&#34;&gt;然后回答，关闭朋友圈，我获得了什么体验？&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;玩手机时间明显下降&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;刚查看了下使用时长，过去七天，手机上平均每天使用了微信1.5h(ios进设置-电池可以查看最近7天使用时长)，比过去降低了很多。&lt;/p&gt;
+&lt;p&gt;平均每天玩手机的时间缩减到3h（ios可以使用一个叫moment的软件查看）。&lt;/p&gt;
+&lt;p&gt;想想还是很恐怖！玩手机时间居然这么久！并且第一反应是自己绝对没有这么多的有木有！几乎全是碎片时间玩的。&lt;/p&gt;
+&lt;p&gt;我推荐大家都可以去统计统计自己的数据，看到数据时你说不定会目瞪口呆。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;注意力更加集中&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;之前刷朋友圈很容易分散精力，发朋友圈之后潜意识也会经常出来分心。之前还是用番茄时间来提高效率的，现在番茄时间都不大需要了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;会更关注及时的互动&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;告别了点赞之交，会更加关注聊天、会面。偶尔闲了点开朋友的朋友圈，看看最近动态，然后闲聊一番，而且会收到一些不长联络的朋友发来消息询问近况，感觉关系更加真实了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;加深了对现实社交的反思&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我们父辈，爷爷辈的人，他们没有社交网络，还不是生活的好好地？看看网下的，看看更加真实的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;仍然有弊端&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;与朋友圈的一些人联系减弱了，但是人际关系不在于泛而在于精，真正陪在自己身边的并不多啊。&lt;/p&gt;
+&lt;p&gt;很多信息获取的慢，比如朋友圈的病毒营销，我总是新闻出来了才知道….&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;总结&#34;&gt;总结&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;关闭朋友圈并不是一种掩耳盗铃、逃避现实的方法，而是一种倒逼手段，它倒逼我更加注重现实人际关系，提高专注力，以及减少无谓的存在感。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;它有得到，也不可避免有失去。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;我什么时候回来？也许是明天，也许是明天。&lt;/strong&gt;&lt;/p&gt;
+">关闭朋友圈是一种什么样的体验？</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" href="https://absir.me/post/pi-jiu-yu-niao-bu/"" data-c="
+          &lt;p&gt;“啤酒与尿布”的故事诞生于20世纪90年代的美国沃尔玛超市，沃尔玛的超市管理人员分析销售数据事发现了一个令人难以理解的现象：在某些特定的情况下，啤酒与尿布这两件看上去毫无关系的商品会经常出现在同一个购物篮中，经过调查发现，这种现象出现在年轻的父亲身上。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;这个故事揭露了零售卖场中一个全新的管理观念，即商品之间是具有关联关系的，发现和利用这些商品之间的关联关系，可以在无法大幅增加门店客户数的前提下，通过增加购物篮中的商品数量达到增加销售额的目的，从而获得更大的经营收益。&lt;/p&gt;
+&lt;p&gt;本书的案例都是从购物篮出发，然后通过分析数据从而得出商业决策。&lt;/p&gt;
+&lt;p&gt;购物篮分析方法主要有两种：&lt;/p&gt;
+&lt;h2 id=&#34;美式购物篮分析方法沃尔玛分析购物篮内商品之间的关联信息&#34;&gt;美式购物篮分析方法（沃尔玛）：分析购物篮内商品之间的关联信息。&lt;/h2&gt;
+&lt;p&gt;沃尔玛卖场面积巨大，商品种类繁多，通过购物篮分析找出淹没在不同区域商品之前的关联关系，并将这些关联关系用于商品关联展示、促销、货品选择、包装、甚至研发产品等具体工作中。&lt;/p&gt;
+&lt;h3 id=&#34;商品配置分析&#34;&gt;商品配置分析&lt;/h3&gt;
+&lt;p&gt;通过分析购物篮数据，进而测算商品之间的相关性，假如啤酒与尿布的关联性是60%（购买啤酒的有60%购买了尿布），则当该店啤酒脱销之后，自然会影响尿布的销量。这是正相关。除此之外，还有负相关，主要是互相替代产品之间存在的关系，比如豆浆与牛奶。根据商品之间的相关性可以做出很多商业决策，比如设置陈列位置、打包促销等。&lt;/p&gt;
+&lt;p&gt;关于商品分类也比较值得一说，沃尔玛将商品在卖场中的表现，分为主力产品、辅助产品与关联商品。合理搭配主力商品、辅助商品、关联商品三类商品属性在商品结构中的分布比例，确保商店整体业绩的提升。&lt;/p&gt;
+&lt;h3 id=&#34;客户需求分析&#34;&gt;客户需求分析&lt;/h3&gt;
+&lt;p&gt;通过购物篮分析，还可以对客户群体认识得更加清楚，通过对购物篮数据进行用户群体划分，建立用户画像。比如发现门店下午的哈根达斯卖的特别好，推断出门店周边有一大批白领上班族，从而继续上架更多针对这一人群的适宜商品，从而增加经营收益。&lt;/p&gt;
+&lt;h3 id=&#34;产品分析&#34;&gt;产品分析&lt;/h3&gt;
+&lt;p&gt;通过购物篮分析，还可以完善产品。比如通过分析得出，某商品在购物篮中大概率出现的个数是4个，那么就可以生产5个的组合包装，用户稍微跳一跳就能够得着，自然会促进销售数量。&lt;/p&gt;
+&lt;h3 id=&#34;销售趋势分析&#34;&gt;销售趋势分析&lt;/h3&gt;
+&lt;p&gt;通过数据仓库对品种和库存的趋势进行分析，选定需要补充的商品，研究客户购买趋势，分析季节性购买模式，确定降价商品。&lt;/p&gt;
+&lt;h2 id=&#34;日式购物篮分析方法7-11便利店分析影响商品销售的所有因素&#34;&gt;日式购物篮分析方法（7-11便利店）：分析影响商品销售的所有因素。&lt;/h2&gt;
+&lt;p&gt;7-11便利店经营面积一般相对狭小，所以找出商品关联关系并非是重点。分析重点是所有影响商品销售的关联因素，比如天气、温度、时间、事件、客户群体等商品相关性因素。&lt;/p&gt;
+&lt;p&gt;商品销售与天气因素有非常大的关联性，在西方产业界，很多行业都有自己的商品气象指数。7-11便利店总部会向气象台购买3天内的卫星云图，用以预测3天内天气的变化趋势，然后按照不同商品与天气之间的对应关系，组织门店的商品进货、上架及销售。还要求门店每天5次将门店内外的温度、湿度上传回总部，供总部与商品销售进行对比分析，可见其研究程度之深。&lt;/p&gt;
+&lt;p&gt;对于影响门店商品销售的所有关联因素，日本人研究得非常详细。&lt;/p&gt;
+&lt;p&gt;从购物篮海量的数据，书中提出了数种不同角度的分析方法。看完此书，第一感觉是惊叹，从小小的购物篮视角就可以洞察各种影响销售的条件，进而通过分析数据，得出商业决策，感受得到“由小见大”的哲学观，任何看似简单的事情下都拥有不简单的智慧。&lt;/p&gt;
+&lt;p&gt;除此之外，感叹零售行业，经过半个世纪的发展历史(假定从世界上第一家超市1952年诞生开始算起)，已积累如此深的管理智慧，在商业方面从对人的研究（可靠性低）转向对数据的研究（可靠性更高）。又站上了一个全新的高度。&lt;/p&gt;
+&lt;p&gt;从产品竞争层面，再来看看商品竞争的发展阶段。&lt;/p&gt;
+&lt;p&gt;第一阶段：卖方市场（有了就买，商品短缺）&lt;/p&gt;
+&lt;p&gt;第二阶段：功能、价格、稳定基础因素等（开始注重功能、价格、稳定等因素的综合竞争优势）&lt;/p&gt;
+&lt;p&gt;第三阶段：体验性（功能啥的都差不多，开始进行体验性竞争，注重产品）&lt;/p&gt;
+&lt;p&gt;第四阶段：定位（体验性都做的好，开始进行用户定位竞争，比如细分群体、用户认知、注重运营、情怀）&lt;/p&gt;
+&lt;p&gt;第五阶段：接近（你的信息接触到用户，你就赢了）&lt;/p&gt;
+&lt;p&gt;快消类产品由于产品更加同质化，远远比刚发展20多年的互联网行业更早的走入定位时代（早在新千年之前）。看完了本书，更加让我对互联网思维的优越性更加不敢苟同，互联网思维并非是一个全新的认知模式，而是基于互联网的基础特征并结合之前传统行业的经验积累而产生的一种解决问题的理论指导而已。传统行业经过漫长的历史悠久，在产品、商业方面已经积累了丰富的知识与经验。比如丰田的精益生产、快消品的定位竞争、以及本书的购物篮分析。互联网行业从业人员更应该俯下身子，虚心从传统行业取取经。&lt;/p&gt;
+&lt;p&gt;一即一切，一切即一。&lt;/p&gt;
+">啤酒与尿布</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" href="https://absir.me/post/yong-hu-ti-yan-zhen-de-chong-yao-ma/"" data-c="
+          &lt;p&gt;产品经理A:”我为追求极致的用户体验而生”。&lt;/p&gt;
+&lt;p&gt;大佬B:”为了达到这个效果，我们修改了十几版设计图，像素追求达到毫米级”&lt;/p&gt;
+&lt;p&gt;老板C:”把这个头像向右移2像素，等等，向左移动1像素..对,放大一点…”&lt;/p&gt;
+&lt;p&gt;产品经理D:”没有好的用户体验，用户怎么会喜欢你的产品呢？”&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;以上的场景，有没有好熟悉或感同身受？用户体验，这个词随着火热的互联网逐渐知名，经常看到许多产品经理的slogan写着“追求极致的用户体验”，甚至排场十足的发布会，各个大佬也都在狂侃说自己产品体验如何好，为了达到这个效果曾经改了多少版；为了追求毫米级的像素抠了多少次设计稿（比如APP）。身边逐渐升起来一种“没有好的用户体验就无法获得市场”的言论。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;那么，我提出疑问，用户体验真的那么重要吗？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;讨论一个问题之前，先明确边界。广义的用户体验包括产品给用户所有的感受（包括功能、外观、操作等一切可以感受的东西）。这样的定义就太过广泛。论证剖析没有意义。本文中的用户体验的范围仅仅局限在表现层（加瑞特在经典书籍《用户体验的要素中》将用户体验的要素分成五个层次，分别是战略层、范围层、结构层、框架层和表现层。），比如外观，交互、排版，包装等。&lt;/p&gt;
+&lt;p&gt;从标题的反问语气，就知道我将在本文论述的观点，用户体验并没有想象中的那么重要。&lt;/p&gt;
+&lt;h2 id=&#34;1用户体验的重要性取决于用户对用户体验的关注度&#34;&gt;1.用户体验的重要性取决于用户对用户体验的关注度&lt;/h2&gt;
+&lt;p&gt;用户的需求是不断演进的，正如马斯洛需求层次理论一样，只有低层级需求被基本满足之后，用户对更高级的需求才会凸显出来。&lt;/p&gt;
+&lt;p&gt;（马斯洛需求层次理论：假如一个人同时缺乏食物、安全、爱和尊重，通常对食物的需求量是最强烈的，其它需要则显得不那么重要。此时人的意识几乎全被饥饿所占据，所有能量都被用来 获取食物。在这种极端情况下，人生的全部意义就是吃，其它什么都不重要。只有当人从生理需要的控制下解放出来时，才可能出现更高级的、社会化程度更高的需 要如安全的需要。）&lt;/p&gt;
+&lt;p&gt;克莱顿·克里斯坦森在《创新者的窘境》书中将用户对产品的购买因素分成四个阶段，功能性、可靠性、便捷性、价格。只有当前一个因素被市场基本满足的情况下，用户的关注度才会向下一个关注因素转移。&lt;/p&gt;
+&lt;p&gt;“如果你是做H网，你是将时间更多的拿去找片，还是关注用户体验？”&lt;/p&gt;
+&lt;p&gt;用户的需求关注点受制于市场的需求满足现状。比如手机、移动互联网 等行业的红海竞争，追求用户体验并无错误。但是如果你目前进行的是蓝海市场的开拓…请！请！请！先把用户体验的重要性降低吧！&lt;/p&gt;
+&lt;p&gt;用户体验更应该是博弈，是在所有产品属性中的达到的一种平衡。 另外，对任何东西的极致意味着偏颇与失衡。极致的用户体验，你时间真够多的！&lt;/p&gt;
+&lt;p&gt;理想的情况下，产品从用户出发&lt;/p&gt;
+&lt;p&gt;实际的情况下，产品从市场出发&lt;/p&gt;
+&lt;p&gt;用户体验并不一定非常重要，取决于市场的竞争现状。&lt;/p&gt;
+&lt;h2 id=&#34;2用户体验的重要性取决于当前的产品阶段&#34;&gt;2.用户体验的重要性取决于当前的产品阶段&lt;/h2&gt;
+&lt;p&gt;丰田的精益思维方法论逐渐流传开来，但是产品瀑布流方法论（发现机会-定义产品-研发产品-上线）仍然以各种变体在传统的产品研发流程中活跃。&lt;/p&gt;
+&lt;p&gt;精益思想的精髓是杜绝浪费，接受缺陷。核心哲学是“我TMD也不知道用户需求是啥啊！边走边看呗”&lt;/p&gt;
+&lt;p&gt;“不知道这个需求是不是用户需要的，那怎么办？调查呗！用户心口不一怎么办？那就测试呗！那要把功能做完才测试吗？做一点先看看,不能浪费啊…”&lt;/p&gt;
+&lt;p&gt;注重迭代，先做一点，用户觉得好，在把它完善。&lt;/p&gt;
+&lt;p&gt;传统的瀑布流思维是掌控。核心前提是“我知道用户的需求！，我知道用户的需求！”&lt;/p&gt;
+&lt;p&gt;“这个需求是用户要的，对，你实现吧！一定要完美”&lt;/p&gt;
+&lt;p&gt;注重完美，哪怕多花点时间，一步做好，嗯，要完美的！&lt;/p&gt;
+&lt;p&gt;有一句话，不断的学习，让我逐渐发现我是如此无知。或许也可以引申到产品经理。不断的成长，我才发现我对用户需求一无所知。&lt;/p&gt;
+&lt;p&gt;产品发展过程分成三个阶段（从精益思想总结）。&lt;/p&gt;
+&lt;h3 id=&#34;1需求的验证阶段&#34;&gt;1.需求的验证阶段&lt;/h3&gt;
+&lt;p&gt;验证用户是否有你要解决的需求，比如调查用户是否有约炮的需求。&lt;/p&gt;
+&lt;h3 id=&#34;2解决方案验证阶段&#34;&gt;2.解决方案验证阶段&lt;/h3&gt;
+&lt;p&gt;验证你的解决方案是否被用户接受，约炮的需求解决方案到底是陌陌好呢？还是UBER好呢？&lt;/p&gt;
+&lt;h3 id=&#34;3产品的发展阶段&#34;&gt;3.产品的发展阶段&lt;/h3&gt;
+&lt;p&gt;需求和解决方案都是OK的，进入产品发展期，关注更多功能、体验层面的东西。&lt;/p&gt;
+&lt;p&gt;从上面可以看出，第一阶段和第二阶段用户体验并不是那么重要！需要真正重视用户体验的是第三阶段。&lt;/p&gt;
+&lt;p&gt;所以，什么阶段就该做什么阶段的事吧！&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+&lt;p&gt;用户体验并不是决定产品是否被接受的唯一因素。价格、可获取性、稳定性、及时性等很多因素和它同等重要。产品被用户接受的原因是其本身多个属性的协调与博弈的结果。&lt;/p&gt;
+&lt;p&gt;在产品的不同阶段，对用户体验的关注度应该不一样。只有在需求和解决方法初步得到验证之后，才应该更加关注用户体验。&lt;/p&gt;
+&lt;p&gt;这里或许会有人反驳，你前期不重视用户体验，产品怎么会有人用呢？（我想说的是，对用户体验的关注度降低，不代表不关注，而是对用户体验持有不追求出彩，只要求不明显降分的态度）。&lt;/p&gt;
+&lt;h3 id=&#34;我关于对用户体验的建议&#34;&gt;我关于对用户体验的建议&lt;/h3&gt;
+&lt;p&gt;• 不要舍本逐末&lt;/p&gt;
+&lt;p&gt;• 不要过早优化&lt;/p&gt;
+&lt;p&gt;• 不要主观臆想&lt;/p&gt;
+&lt;p&gt;• 不要事倍功半&lt;/p&gt;
+&lt;p&gt;• 不要完美主义&lt;/p&gt;
+">用户体验真的重要吗？</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" href="https://absir.me/post/what-is-mangement/"" data-c="
+          &lt;p&gt;&lt;strong&gt;管理就是解决资源的调配问题的一门学科。&lt;/strong&gt; 我知道就这一句话回答完了你肯定不尽兴，下面我将从唯物史观的角度来聊一聊管理需求的演进。&lt;/p&gt;
+&lt;p&gt;翻开一万年前的人类发展史，有人的地方，便会逐渐形成组织。有组织的地方，便需要管理。所以，从一定维度来说，管理发展史几乎与人类发展史同样漫长。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h2 id=&#34;启蒙前时代-管理主要依靠君授神权和宗教信仰&#34;&gt;启蒙前时代— 管理主要依靠君授神权和宗教信仰&lt;/h2&gt;
+&lt;p&gt;在工业革命之前，宗教、国家是仅有的两种大型组织，在这种通过虔诚的信仰和君授神权的集权制度中，管理是以伦理的方式进行的，没有，也没有必要有正式的管理体系。漫长的农业社会无法催生出更多的组织，自然，管理学仅仅有着一些支离破碎的萌芽。&lt;/p&gt;
+&lt;p&gt;在这个时代，人类是无知的，文明是愚昧的。社会的主流价值观受到宗教、国家洗礼。&lt;/p&gt;
+&lt;h2 id=&#34;启蒙时代管理学更多的关注机器&#34;&gt;启蒙时代–管理学更多的关注机器&lt;/h2&gt;
+&lt;p&gt;公元14世纪开始，文艺复兴运动唤醒了人们理性思考的革命。1765年瓦特发明了蒸汽机,它除了提供了更廉价的动力之外，还唤醒了人类社会上又一轮的认知革命，引发了工业革命的浪潮。推动了更多工厂的出现，从而衍生了管理人员的需求，管理学正式进入启蒙时代。&lt;/p&gt;
+&lt;p&gt;工业革命中前期，管理更多的还是与技术、行业融合在一起，过多地强调技术。这是管理学的发展不可跳跃的必经演进路线，是农业社会向工业社会转型所必须经历的时代。早期的管理种子开始逐渐发芽生长，为科学管理的思想奠定了基础。&lt;/p&gt;
+&lt;h2 id=&#34;科学管理时代管理学成为一门完善的科学&#34;&gt;科学管理时代–管理学成为一门完善的科学&lt;/h2&gt;
+&lt;p&gt;19世纪中后叶，工业革命发展到一个全新的阶段。正值美国工业舞台上小公司向大规模、一体化转变的历史背景下，泰勒推动了这次转变。为管理成为一门独立的科学提供了可信度。他对效率的强调成为那是乃至当代管理的一种主流价值观，并且后继很多人接受并完善了科学管理的思想。毫无疑问，泰勒是管理思想的发展史上一颗璀璨的巨星。自然也实至名归“科学管理之父”的桂冠。管理学科迈入“科学管理时代“。&lt;/p&gt;
+&lt;p&gt;科学管理时代管理思想逐步开花结果，与各种学科珠联璧合，管理学科逐渐变成了一门完善的科学。&lt;/p&gt;
+&lt;h2 id=&#34;社会人时代管理学更多的关注人&#34;&gt;社会人时代–管理学更多的关注人&lt;/h2&gt;
+&lt;p&gt;随着工业社会的逐步发展，社会的经济水平不断提升，人们的需求层次也逐渐发展，这个时候，管理中金钱激励的作用逐渐减小，所以管理学研究逐渐迈入了研究人的领域。这就是管理思想发展史的“社会人时代“。导思想是实现效率和工作场所和谐的关键在于人际关系。&lt;/p&gt;
+&lt;h2 id=&#34;现代关注战略&#34;&gt;现代–关注战略&lt;/h2&gt;
+&lt;p&gt;而在现代，基础的管理制度已经建立。企业能不能活下来的关键瓶颈已经不是员工的效率高不高的问题，而是企业战略和方向上正确性的问题，所以现代管理思想强调领导对目标明确的组织的引导作用，比如战略制定。&lt;/p&gt;
+&lt;p&gt;##题后话&lt;/p&gt;
+&lt;p&gt;1.管理学发展，我怎么看？&lt;br&gt;
+从上面可以看出，不断发展的技术、经济、文化、政治环境都会逐渐影响管理需求的演变。它没有正确与否，只有与时代适应与否。管理的需求是多样化的，动态的。但是管理始终解决的都是人类最古老的问题-资源的配置问题。&lt;/p&gt;
+&lt;p&gt;在时代的发展中，个人的独立意识逐渐苏醒，个人需求层次逐渐提高，这些都导致个体在协作关系中的需求逐渐转变，自然调配资源协作关系的艺术-管理学也需要与时俱进。从关注机器到关注人，从薪资制度到福利关怀。&lt;/p&gt;
+&lt;p&gt;我相信，随着个人意识与个人需求层次逐渐提高，企业的雇佣制度逐渐会转变成合伙制度（最大程度的激励个体主观能动性）。从企业强势向个人强势转变，也就是罗振宇说的手艺人时代。从历史的漫漫长河来看，这也是个体对外控制能力逐渐变强的过程，农业时代依靠天吃饭，工业时代依靠工厂吃饭，而即将到来的未来时代依靠个体吃饭。&lt;/p&gt;
+&lt;p&gt;阅读书籍：《西方管理思想史》 丹尼尔·A·雷恩&lt;/p&gt;
+">什么是管理</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<script>
+  // var escape = "[{&#34;content&#34;:&#34;&lt;blockquote&gt;\n&lt;p&gt;欢迎来到我的小站呀，很高兴遇见你！🤝&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;h2 id=\&#34;关于本站\&#34;&gt;🏠 关于本站&lt;/h2&gt;\n&lt;p&gt;想写啥写啥&lt;/p&gt;\n&lt;h2 id=\&#34;博主是谁\&#34;&gt;👨‍💻 博主是谁&lt;/h2&gt;\n&lt;p&gt;AB先生，一名产品人，学习者&lt;/p&gt;\n&lt;h2 id=\&#34;兴趣爱好\&#34;&gt;⛹ 兴趣爱好&lt;/h2&gt;\n&lt;h2 id=\&#34;联系我呀\&#34;&gt;📬 联系我呀&lt;/h2&gt;\n&lt;p&gt;E-Mail: lvtory@live.com&lt;/p&gt;\n&#34;,&#34;fileName&#34;:&#34;about&#34;,&#34;abstract&#34;:&#34;&#34;,&#34;title&#34;:&#34;关于&#34;,&#34;tags&#34;:[],&#34;date&#34;:&#34;2019-01-25 19:09:48&#34;,&#34;dateFormat&#34;:&#34;2019-01-25&#34;,&#34;feature&#34;:&#34;&#34;,&#34;link&#34;:&#34;https://absir.me/post/about/&#34;,&#34;hideInList&#34;:true,&#34;isTop&#34;:false,&#34;stats&#34;:{&#34;text&#34;:&#34;1 min read&#34;,&#34;time&#34;:11000,&#34;words&#34;:52,&#34;minutes&#34;:1},&#34;description&#34;:&#34;\n欢迎来到我的小站呀，很高兴遇见你！🤝\n\n🏠 关于本站\n想写啥写啥\n👨‍💻 博主是谁\nAB先生，一名产品人，学习者\n⛹ 兴趣爱好\n📬 联系我呀\nE-Mail: lvtory@live.com\n...&#34;,&#34;toc&#34;:&#34;&lt;ul class=\&#34;markdownIt-TOC\&#34;&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99\&#34;&gt;🏠 关于本站&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%8D%9A%E4%B8%BB%E6%98%AF%E8%B0%81\&#34;&gt;👨‍💻 博主是谁&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%85%B4%E8%B6%A3%E7%88%B1%E5%A5%BD\&#34;&gt;⛹ 兴趣爱好&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E8%81%94%E7%B3%BB%E6%88%91%E5%91%80\&#34;&gt;📬 联系我呀&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&#34;},{&#34;content&#34;:&#34;&lt;h2 id=\&#34;前言\&#34;&gt;前言&lt;/h2&gt;\n&lt;blockquote&gt;\n&lt;p&gt;此文章为《知识的边疆》系列第一篇文章。《知识的边疆》是我关于个人知识系统构建的主题文集。&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;!-- more --&gt;\n&lt;p&gt;研究问题，先从上向下。再加上思路的整理以主旨问题提出与解决为主线，有不少好处。那么首先提出本文的主旨问题： &lt;strong&gt;我的PKS系统主要架构是什么？&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;如何解决这个问题？从程序员的思维出发，研究系统有两个思考方式。&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;面向对象&lt;/li&gt;\n&lt;li&gt;面相过程&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;那么为了推导系统，本文从面相对象来进行分析。既然是个人知识管理系统，那我们就围绕整个系统的核心：&lt;strong&gt;知识&lt;/strong&gt; 入手试试呗。&lt;/p&gt;\n&lt;h3 id=\&#34;知识的前世今生\&#34;&gt;知识的前世今生&lt;/h3&gt;\n&lt;p&gt;我将知识分成以下4个阶段:&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;信息&lt;/li&gt;\n&lt;li&gt;知识&lt;/li&gt;\n&lt;li&gt;技能&lt;/li&gt;\n&lt;li&gt;才干&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h4 id=\&#34;信息\&#34;&gt;信息&lt;/h4&gt;\n&lt;p&gt;信息是知识的前世，比率时代，一切事务都朝着信息化的方向发展着。信息的价值化后就变成了知识。当然，有价值就意味着有主观，同样的信息，对一个人来说可能是信息，对另外一个人来说可能就是知识。信息是被知识被过滤之前的状态。&lt;/p&gt;\n&lt;h4 id=\&#34;知识\&#34;&gt;知识&lt;/h4&gt;\n&lt;p&gt;信息被价值过滤网过滤之后，有价值的部分转变成知识。这里有人会问，那我收藏在笔记软件中的那些没看过的文章，算是知识还是信息啊？我认为这依旧算信息，因为并没有进行知识化。&lt;/p&gt;\n&lt;h4 id=\&#34;技能\&#34;&gt;技能&lt;/h4&gt;\n&lt;p&gt;技能是知识的运用方式，我们大部分知识的实用价值在此体现。&lt;/p&gt;\n&lt;h4 id=\&#34;才干\&#34;&gt;才干&lt;/h4&gt;\n&lt;p&gt;知识、技能内化到思维中去，就变成了才干，它是一种真正的核心竞争力。&lt;/p&gt;\n&lt;h2 id=\&#34;我的个人知识系统最简架构\&#34;&gt;我的个人知识系统最简架构&lt;/h2&gt;\n&lt;figure data-type=\&#34;image\&#34; tabindex=\&#34;1\&#34;&gt;&lt;img src=\&#34;http://upload-images.jianshu.io/upload_images/1069640-e2b5a259a208726d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240\&#34; alt=\&#34;img\&#34; loading=\&#34;lazy\&#34;&gt;&lt;/figure&gt;\n&lt;figure data-type=\&#34;image\&#34; tabindex=\&#34;2\&#34;&gt;&lt;img src=\&#34;http://upload-images.jianshu.io/upload_images/1069640-d7f991a66262b9e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240\&#34; alt=\&#34;img\&#34; loading=\&#34;lazy\&#34;&gt;&lt;/figure&gt;\n&lt;p&gt;我的个人知识系统主要由 &lt;strong&gt;知识化&lt;/strong&gt;、&lt;strong&gt;体系化&lt;/strong&gt;、&lt;strong&gt;价值化&lt;/strong&gt; 三个流程组成。通过这三个流程，完成 &lt;strong&gt;让信息变成知识&lt;/strong&gt;、&lt;strong&gt;知识融入体系&lt;/strong&gt;、&lt;strong&gt;知识/体系 价值转化&lt;/strong&gt;、&lt;strong&gt;价值萃取&lt;/strong&gt; 五个功能。&lt;/p&gt;\n&lt;h3 id=\&#34;知识化\&#34;&gt;知识化&lt;/h3&gt;\n&lt;p&gt;顾名思义，知识化就是将输入资源变成自己需要的知识。&lt;/p&gt;\n&lt;p&gt;知识化流程的输入：&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;外界产生的（书籍、文章、演讲、资料等）&lt;/li&gt;\n&lt;li&gt;自己产生的（通过业务运用自己萃取的信息）&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;知识化流程的输出：&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;结构化知识（比如读书笔记、脑图、书评….）&lt;/li&gt;\n&lt;li&gt;零散性知识（比如片段摘抄、佳句等卡片级素材）&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h3 id=\&#34;体系化\&#34;&gt;体系化&lt;/h3&gt;\n&lt;p&gt;体系化是指将知识化形成的知识整理进个人知识体系。&lt;/p&gt;\n&lt;p&gt;体系化流程的输入：&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;结构化知识（比如读书笔记、脑图、书评….）&lt;/li&gt;\n&lt;li&gt;零散性知识（比如片段摘抄、佳句等卡片级素材）&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;体系化流程的输出：&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;个人知识体系&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h4 id=\&#34;个人知识体系\&#34;&gt;个人知识体系&lt;/h4&gt;\n&lt;p&gt;个人知识体系为外化的个人知识信息库，它存储着几乎所有的个人知识。而且在不断的更新和升级。&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;这里有人会问，为什么是外化的？终极目标不是内化到大脑中吗？&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;下面是我的回答。&lt;/p&gt;\n&lt;blockquote&gt;\n&lt;p&gt;我想从以下几点来谈谈我的想法。&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;知识从外界到大脑之中，肯定有一个整理过程。&lt;/li&gt;\n&lt;li&gt;大脑如何更好的体系化？那就是写下来，写下来可以帮助澄清思路。&lt;/li&gt;\n&lt;li&gt;很多案例、素材、细节，我们大脑肯定是记不住的。&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;从以上三点出发，我的观点是最好在外界搭建一个个人知识体系。它帮助大脑更好的实现 整理、体系化、记住细节。&lt;/p&gt;\n&lt;p&gt;而且 大脑不可靠，不可靠的地方用外界科学的系统代替，也是一个趋势。&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;综上，我个人认为，个人知识体系是外化的。&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;你可以在这里同我讨论 &lt;a href=\&#34;https://github.com/absir1949/PKS/issues/2\&#34;&gt;【问题】为什么个人知识体系是外化的？而不是存储在大脑中的？&lt;/a&gt;&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;p&gt;我在这里提出 &lt;strong&gt;知识的三维结构模型&lt;/strong&gt;，从三个维度去描述知识。&lt;/p&gt;\n&lt;h4 id=\&#34;广度结构\&#34;&gt;广度结构&lt;/h4&gt;\n&lt;p&gt;广度结构，是指围绕一个知识点的横向延伸，比如关于一个名词，可以用5W2H来进行延伸。&lt;/p&gt;\n&lt;h4 id=\&#34;深度结构\&#34;&gt;深度结构&lt;/h4&gt;\n&lt;p&gt;纵向结构，是指围绕一个知识点的纵向延伸，这个知识可被归纳在哪个更高维度知识之下？可归纳那些更低维度知识？，可被什么知识所演绎？可演绎出什么知识？纵向结构是将知识条理化的重要手段。&lt;/p&gt;\n&lt;h4 id=\&#34;高度结构\&#34;&gt;高度结构&lt;/h4&gt;\n&lt;p&gt;高度结构，是最抽象的维度。不断抽象，必然会上升了个到哲学层面，比如电荷的正负、太极的阴阳，月亮的盈亏、有什么联系呢？它是将知识关联、打破边界的高阶手段，也是个人知识体系走向融会贯通的希冀之路。&lt;/p&gt;\n&lt;p&gt;从上面输出的分类可以看出来，我使用的是逻辑性的分类方式，为什么要使用逻辑呢？更好的逻辑结构方便个人知识体系的管理。如果是一个混沌的关联网状结构，管理成本是很高的。&lt;/p&gt;\n&lt;p&gt;因此，我的个人知识体系里面的知识包含三类:&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;广度结构知识&lt;/li&gt;\n&lt;li&gt;深度结构知识&lt;/li&gt;\n&lt;li&gt;高度结构知识&lt;/li&gt;\n&lt;/ul&gt;\n&lt;blockquote&gt;\n&lt;p&gt;此问题可以参于讨论 &lt;a href=\&#34;https://github.com/absir1949/PKS/issues/4\&#34;&gt;【问题】个人知识体系中主要结构是怎么样的？&lt;/a&gt;&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;h3 id=\&#34;价值化\&#34;&gt;价值化&lt;/h3&gt;\n&lt;p&gt;价值化指将个人知识体系变现成价值的流程，是知识走向实用的方式。&lt;/p&gt;\n&lt;p&gt;价值化的流程的输入：&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;知识化流程输出的知识&lt;/li&gt;\n&lt;li&gt;个人知识体系&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;价值化流程的输出：&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;通过知识外显化转变成文章、图书、演讲、培训、咨询、谈资等&lt;/li&gt;\n&lt;li&gt;通过知识内隐化转变成才干、技能&lt;/li&gt;\n&lt;li&gt;通过在实际的业务中运用知识获得提升。&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h3 id=\&#34;总结\&#34;&gt;总结&lt;/h3&gt;\n&lt;p&gt;这就是用面相对象方法，来思考我的个人知识管理系统架构得出的答案。&lt;/p&gt;\n&#34;,&#34;fileName&#34;:&#34;zhi-shi-de-bian-jiang-di-yi-pian-mian-xiang-dui-xiang-lai-tan-jiu-xi-tong-jie-gou&#34;,&#34;abstract&#34;:&#34;&lt;h2 id=\&#34;前言\&#34;&gt;前言&lt;/h2&gt;\n&lt;blockquote&gt;\n&lt;p&gt;此文章为《知识的边疆》系列第一篇文章。《知识的边疆》是我关于个人知识系统构建的主题文集。&lt;/p&gt;\n&lt;/blockquote&gt;\n&#34;,&#34;title&#34;:&#34;【知识的边疆】第一篇·面相对象来探究系统结构&#34;,&#34;tags&#34;:[{&#34;name&#34;:&#34;知识的疆域&#34;,&#34;slug&#34;:&#34;SU95jTZp_y&#34;,&#34;used&#34;:true,&#34;link&#34;:&#34;https://absir.me/tag/SU95jTZp_y/&#34;}],&#34;date&#34;:&#34;2016-05-28 15:45:24&#34;,&#34;dateFormat&#34;:&#34;2016-05-28&#34;,&#34;feature&#34;:&#34;&#34;,&#34;link&#34;:&#34;https://absir.me/post/zhi-shi-de-bian-jiang-di-yi-pian-mian-xiang-dui-xiang-lai-tan-jiu-xi-tong-jie-gou/&#34;,&#34;hideInList&#34;:false,&#34;isTop&#34;:false,&#34;stats&#34;:{&#34;text&#34;:&#34;6 min read&#34;,&#34;time&#34;:306000,&#34;words&#34;:1530,&#34;minutes&#34;:6},&#34;description&#34;:&#34;前言\n\n此文章为《知识的边疆》系列第一篇文章。《知识的边疆》是我关于个人知识系统构建的主题文集。\n\n\n研究问题，先从上向下。再加上思路的整理以主旨问题提出与解决为主线，有不少好处。那么首先提出本文的主旨问题： 我的PKS系统主要架构是什么？...&#34;,&#34;toc&#34;:&#34;&lt;ul class=\&#34;markdownIt-TOC\&#34;&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%89%8D%E8%A8%80\&#34;&gt;前言&lt;/a&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E7%9F%A5%E8%AF%86%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F\&#34;&gt;知识的前世今生&lt;/a&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E4%BF%A1%E6%81%AF\&#34;&gt;信息&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E7%9F%A5%E8%AF%86\&#34;&gt;知识&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E6%8A%80%E8%83%BD\&#34;&gt;技能&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E6%89%8D%E5%B9%B2\&#34;&gt;才干&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E6%88%91%E7%9A%84%E4%B8%AA%E4%BA%BA%E7%9F%A5%E8%AF%86%E7%B3%BB%E7%BB%9F%E6%9C%80%E7%AE%80%E6%9E%B6%E6%9E%84\&#34;&gt;我的个人知识系统最简架构&lt;/a&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E7%9F%A5%E8%AF%86%E5%8C%96\&#34;&gt;知识化&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E4%BD%93%E7%B3%BB%E5%8C%96\&#34;&gt;体系化&lt;/a&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E4%B8%AA%E4%BA%BA%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB\&#34;&gt;个人知识体系&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%B9%BF%E5%BA%A6%E7%BB%93%E6%9E%84\&#34;&gt;广度结构&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E6%B7%B1%E5%BA%A6%E7%BB%93%E6%9E%84\&#34;&gt;深度结构&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E9%AB%98%E5%BA%A6%E7%BB%93%E6%9E%84\&#34;&gt;高度结构&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E4%BB%B7%E5%80%BC%E5%8C%96\&#34;&gt;价值化&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E6%80%BB%E7%BB%93\&#34;&gt;总结&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&#34;},{&#34;content&#34;:&#34;&lt;p&gt;在今年2.18号，我突然关闭了微信朋友圈。截止到今日，朋友圈依旧处于关闭状态。当然，身边的朋友会质疑，你朋友圈不是有更新吗？是的，我仍然通过“分享到朋友圈”和“我的相册”入口发布内容（据统计,约关闭的近40天内发了近10条内容,远比之前每天1条的频率低多了）。&lt;/p&gt;\n&lt;!-- more --&gt;\n&lt;h4 id=\&#34;我现在使用朋友圈的姿势\&#34;&gt;我现在使用朋友圈的姿势&lt;/h4&gt;\n&lt;ul&gt;\n&lt;li&gt;转载我微信公众号的文章&lt;/li&gt;\n&lt;li&gt;转载极度想给朋友们分享的文章&lt;/li&gt;\n&lt;li&gt;发布增强个人影响力的内容&lt;/li&gt;\n&lt;li&gt;极力避免发布无聊的、炫耀的、负面的、刷存在感的内容&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;关闭朋友圈是一时兴起,并未逐条罗列优劣、深思熟虑之后签下了“关闭朋友圈书“，是关闭了之后慢慢体会了诸多好处，然后“逆向合理化”出了很多原因。&lt;/p&gt;\n&lt;h4 id=\&#34;首先回答我为什么要关闭朋友圈\&#34;&gt;首先回答，我为什么要关闭朋友圈？&lt;/h4&gt;\n&lt;h5 id=\&#34;内部原因\&#34;&gt;内部原因&lt;/h5&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;strong&gt;减少注意力分散&lt;/strong&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;blockquote&gt;\n&lt;p&gt;现代社会信息越来越多，我们一天接收到的消息可能比爷爷辈的人一个月接触的消息都多，同样的一天24个小时，可是有更多的信息分散我们的注意力，同时信息也符合二八定律，我们一天接触的消息80%都是对于我们无益的，只有20的信息是有益的，通过限制信息输入通道，过滤垃圾信息，让我们的注意力可以更加专注在必要的地方。所以，关闭朋友圈，同我将微博关注缩减了近一半，将订阅的rss缩减到每天20min可以看完，关闭微信消息通知等做法，都是一种减少注意力分散的方法而已。&lt;/p&gt;\n&lt;p&gt;朋友圈的新评论提醒无法关闭，每次打开看到有新评论总是止不住的好奇心立即点开，而且发完了朋友圈心理痒痒的总随时关注着，一直想着，谁会点赞，谁会评论。这对注意力的消耗也比较大。&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;strong&gt;减弱对个人存在感的关注&lt;/strong&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;blockquote&gt;\n&lt;p&gt;曾经努力探究一个答案。为什么人要社交？最后努力找到一个我认为最好的答案：为了防止被遗忘。存在感是证明人活着这个世界上的间接证据，是为了满足人的精神需求层次中的社会需求。&lt;/p&gt;\n&lt;p&gt;等等，为什么我要靠这种间接证据去证明我活在了这个世界上？为什么要证明我曾经活在了世上？为什么我需要给别人刷存在感？一人一世界，我真真实实，彻彻底底地存在我的世界。这就是我的、真实的世界了。&lt;/p&gt;\n&lt;p&gt;人皆渺小，无论是伟大的爱因斯坦，还是街边的一个无人知晓、穷困潦倒的乞丐，从广义的视角来看，他们在浩瀚的宇宙中，都是两个极小的尘埃，都是一样微不足道的存在。&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;将个人存在感从向外探寻转而内心求法，是提升“个人存在感”的最有效途径。&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;这里或许会有人反驳，你这不是切切实实的唯心主义么？这完全是个人对外掌控能力弱的体现！你这不是鼓励人们只活在内心世界吗？&lt;/p&gt;\n&lt;p&gt;我想说，存在感不是一个证明题，而是一个主观题。首先认识到自己泯然众人，然后其实并没有什么人关注你到底今天吃了什么，去哪里玩了，心情好不好。而是我们自己清楚的认识到自己今天吃了什么，去哪里玩了，心情好不好。&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;你是选择，为自己存在，还是，为别人存在？&lt;/strong&gt;&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;strong&gt;减弱个人炫耀心理&lt;/strong&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;blockquote&gt;\n&lt;p&gt;我有时会有炫耀的行为(没有对自己贴标签是怕皮格马利翁效应)，做出了一点点成就，就喜欢让别人觉得自己好牛逼，赶快发个朋友圈晒一晒，看到大片的赞和评论，虚荣心将得到极大的满足。&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;真正的强者，不是因为外界认同，而是因为自我认同&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;所以关闭朋友圈，减少一条炫耀的途径，来减少个人的炫耀心理，控制对外发声的途径，也没啥不好的啊。&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;h4 id=\&#34;外部原因\&#34;&gt;外部原因&lt;/h4&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;strong&gt;朋友圈信息营养低&lt;/strong&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;blockquote&gt;\n&lt;p&gt;自拍、微商、鸡汤、大餐、段子、广告、敬业 各种信息含金量真是非常非常….&lt;/p&gt;\n&lt;p&gt;这就是生活啊！真真实实的生活啊！&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;strong&gt;朋友圈对我并没有什么意义&lt;/strong&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;blockquote&gt;\n&lt;p&gt;我将使用朋友圈的意义分成下面几种:&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;结交人脉&lt;/li&gt;\n&lt;li&gt;吸引配偶&lt;/li&gt;\n&lt;li&gt;维持关系&lt;/li&gt;\n&lt;li&gt;满足自己&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;但是这些目的是不是不用朋友圈就不行呢？通通电话，聊聊天，约出来喝杯茶，会不会更加有效呢！&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;人际关系，不是点赞之交&lt;/strong&gt;&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;h4 id=\&#34;然后回答关闭朋友圈我获得了什么体验\&#34;&gt;然后回答，关闭朋友圈，我获得了什么体验？&lt;/h4&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;strong&gt;玩手机时间明显下降&lt;/strong&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;blockquote&gt;\n&lt;p&gt;刚查看了下使用时长，过去七天，手机上平均每天使用了微信1.5h(ios进设置-电池可以查看最近7天使用时长)，比过去降低了很多。&lt;/p&gt;\n&lt;p&gt;平均每天玩手机的时间缩减到3h（ios可以使用一个叫moment的软件查看）。&lt;/p&gt;\n&lt;p&gt;想想还是很恐怖！玩手机时间居然这么久！并且第一反应是自己绝对没有这么多的有木有！几乎全是碎片时间玩的。&lt;/p&gt;\n&lt;p&gt;我推荐大家都可以去统计统计自己的数据，看到数据时你说不定会目瞪口呆。&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;strong&gt;注意力更加集中&lt;/strong&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;blockquote&gt;\n&lt;p&gt;之前刷朋友圈很容易分散精力，发朋友圈之后潜意识也会经常出来分心。之前还是用番茄时间来提高效率的，现在番茄时间都不大需要了。&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;strong&gt;会更关注及时的互动&lt;/strong&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;blockquote&gt;\n&lt;p&gt;告别了点赞之交，会更加关注聊天、会面。偶尔闲了点开朋友的朋友圈，看看最近动态，然后闲聊一番，而且会收到一些不长联络的朋友发来消息询问近况，感觉关系更加真实了。&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;strong&gt;加深了对现实社交的反思&lt;/strong&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;blockquote&gt;\n&lt;p&gt;我们父辈，爷爷辈的人，他们没有社交网络，还不是生活的好好地？看看网下的，看看更加真实的。&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;strong&gt;仍然有弊端&lt;/strong&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;blockquote&gt;\n&lt;p&gt;与朋友圈的一些人联系减弱了，但是人际关系不在于泛而在于精，真正陪在自己身边的并不多啊。&lt;/p&gt;\n&lt;p&gt;很多信息获取的慢，比如朋友圈的病毒营销，我总是新闻出来了才知道….&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;h4 id=\&#34;总结\&#34;&gt;总结&lt;/h4&gt;\n&lt;p&gt;&lt;strong&gt;关闭朋友圈并不是一种掩耳盗铃、逃避现实的方法，而是一种倒逼手段，它倒逼我更加注重现实人际关系，提高专注力，以及减少无谓的存在感。&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;它有得到，也不可避免有失去。&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;我什么时候回来？也许是明天，也许是明天。&lt;/strong&gt;&lt;/p&gt;\n&#34;,&#34;fileName&#34;:&#34;guan-bi-peng-you-quan-shi-yi-chong-shi-me-yang-de-ti-yan&#34;,&#34;abstract&#34;:&#34;&lt;p&gt;在今年2.18号，我突然关闭了微信朋友圈。截止到今日，朋友圈依旧处于关闭状态。当然，身边的朋友会质疑，你朋友圈不是有更新吗？是的，我仍然通过“分享到朋友圈”和“我的相册”入口发布内容（据统计,约关闭的近40天内发了近10条内容,远比之前每天1条的频率低多了）。&lt;/p&gt;\n&#34;,&#34;title&#34;:&#34;关闭朋友圈是一种什么样的体验？&#34;,&#34;tags&#34;:[{&#34;name&#34;:&#34;成长的疆域&#34;,&#34;slug&#34;:&#34;KwW-xy5e3&#34;,&#34;used&#34;:true,&#34;link&#34;:&#34;https://absir.me/tag/KwW-xy5e3/&#34;}],&#34;date&#34;:&#34;2016-04-02 15:40:40&#34;,&#34;dateFormat&#34;:&#34;2016-04-02&#34;,&#34;feature&#34;:&#34;&#34;,&#34;link&#34;:&#34;https://absir.me/post/guan-bi-peng-you-quan-shi-yi-chong-shi-me-yang-de-ti-yan/&#34;,&#34;hideInList&#34;:false,&#34;isTop&#34;:false,&#34;stats&#34;:{&#34;text&#34;:&#34;7 min read&#34;,&#34;time&#34;:365000,&#34;words&#34;:1815,&#34;minutes&#34;:7},&#34;description&#34;:&#34;在今年2.18号，我突然关闭了微信朋友圈。截止到今日，朋友圈依旧处于关闭状态。当然，身边的朋友会质疑，你朋友圈不是有更新吗？是的，我仍然通过“分享到朋友圈”和“我的相册”入口发布内容（据统计,约关闭的近40天内发了近10条内容,远比之前每天...&#34;,&#34;toc&#34;:&#34;&lt;ul class=\&#34;markdownIt-TOC\&#34;&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E6%88%91%E7%8E%B0%E5%9C%A8%E4%BD%BF%E7%94%A8%E6%9C%8B%E5%8F%8B%E5%9C%88%E7%9A%84%E5%A7%BF%E5%8A%BF\&#34;&gt;我现在使用朋友圈的姿势&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E9%A6%96%E5%85%88%E5%9B%9E%E7%AD%94%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%85%B3%E9%97%AD%E6%9C%8B%E5%8F%8B%E5%9C%88\&#34;&gt;首先回答，我为什么要关闭朋友圈？&lt;/a&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%86%85%E9%83%A8%E5%8E%9F%E5%9B%A0\&#34;&gt;内部原因&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%A4%96%E9%83%A8%E5%8E%9F%E5%9B%A0\&#34;&gt;外部原因&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E7%84%B6%E5%90%8E%E5%9B%9E%E7%AD%94%E5%85%B3%E9%97%AD%E6%9C%8B%E5%8F%8B%E5%9C%88%E6%88%91%E8%8E%B7%E5%BE%97%E4%BA%86%E4%BB%80%E4%B9%88%E4%BD%93%E9%AA%8C\&#34;&gt;然后回答，关闭朋友圈，我获得了什么体验？&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E6%80%BB%E7%BB%93\&#34;&gt;总结&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&#34;},{&#34;content&#34;:&#34;&lt;p&gt;“啤酒与尿布”的故事诞生于20世纪90年代的美国沃尔玛超市，沃尔玛的超市管理人员分析销售数据事发现了一个令人难以理解的现象：在某些特定的情况下，啤酒与尿布这两件看上去毫无关系的商品会经常出现在同一个购物篮中，经过调查发现，这种现象出现在年轻的父亲身上。&lt;/p&gt;\n&lt;!-- more --&gt;\n&lt;p&gt;这个故事揭露了零售卖场中一个全新的管理观念，即商品之间是具有关联关系的，发现和利用这些商品之间的关联关系，可以在无法大幅增加门店客户数的前提下，通过增加购物篮中的商品数量达到增加销售额的目的，从而获得更大的经营收益。&lt;/p&gt;\n&lt;p&gt;本书的案例都是从购物篮出发，然后通过分析数据从而得出商业决策。&lt;/p&gt;\n&lt;p&gt;购物篮分析方法主要有两种：&lt;/p&gt;\n&lt;h2 id=\&#34;美式购物篮分析方法沃尔玛分析购物篮内商品之间的关联信息\&#34;&gt;美式购物篮分析方法（沃尔玛）：分析购物篮内商品之间的关联信息。&lt;/h2&gt;\n&lt;p&gt;沃尔玛卖场面积巨大，商品种类繁多，通过购物篮分析找出淹没在不同区域商品之前的关联关系，并将这些关联关系用于商品关联展示、促销、货品选择、包装、甚至研发产品等具体工作中。&lt;/p&gt;\n&lt;h3 id=\&#34;商品配置分析\&#34;&gt;商品配置分析&lt;/h3&gt;\n&lt;p&gt;通过分析购物篮数据，进而测算商品之间的相关性，假如啤酒与尿布的关联性是60%（购买啤酒的有60%购买了尿布），则当该店啤酒脱销之后，自然会影响尿布的销量。这是正相关。除此之外，还有负相关，主要是互相替代产品之间存在的关系，比如豆浆与牛奶。根据商品之间的相关性可以做出很多商业决策，比如设置陈列位置、打包促销等。&lt;/p&gt;\n&lt;p&gt;关于商品分类也比较值得一说，沃尔玛将商品在卖场中的表现，分为主力产品、辅助产品与关联商品。合理搭配主力商品、辅助商品、关联商品三类商品属性在商品结构中的分布比例，确保商店整体业绩的提升。&lt;/p&gt;\n&lt;h3 id=\&#34;客户需求分析\&#34;&gt;客户需求分析&lt;/h3&gt;\n&lt;p&gt;通过购物篮分析，还可以对客户群体认识得更加清楚，通过对购物篮数据进行用户群体划分，建立用户画像。比如发现门店下午的哈根达斯卖的特别好，推断出门店周边有一大批白领上班族，从而继续上架更多针对这一人群的适宜商品，从而增加经营收益。&lt;/p&gt;\n&lt;h3 id=\&#34;产品分析\&#34;&gt;产品分析&lt;/h3&gt;\n&lt;p&gt;通过购物篮分析，还可以完善产品。比如通过分析得出，某商品在购物篮中大概率出现的个数是4个，那么就可以生产5个的组合包装，用户稍微跳一跳就能够得着，自然会促进销售数量。&lt;/p&gt;\n&lt;h3 id=\&#34;销售趋势分析\&#34;&gt;销售趋势分析&lt;/h3&gt;\n&lt;p&gt;通过数据仓库对品种和库存的趋势进行分析，选定需要补充的商品，研究客户购买趋势，分析季节性购买模式，确定降价商品。&lt;/p&gt;\n&lt;h2 id=\&#34;日式购物篮分析方法7-11便利店分析影响商品销售的所有因素\&#34;&gt;日式购物篮分析方法（7-11便利店）：分析影响商品销售的所有因素。&lt;/h2&gt;\n&lt;p&gt;7-11便利店经营面积一般相对狭小，所以找出商品关联关系并非是重点。分析重点是所有影响商品销售的关联因素，比如天气、温度、时间、事件、客户群体等商品相关性因素。&lt;/p&gt;\n&lt;p&gt;商品销售与天气因素有非常大的关联性，在西方产业界，很多行业都有自己的商品气象指数。7-11便利店总部会向气象台购买3天内的卫星云图，用以预测3天内天气的变化趋势，然后按照不同商品与天气之间的对应关系，组织门店的商品进货、上架及销售。还要求门店每天5次将门店内外的温度、湿度上传回总部，供总部与商品销售进行对比分析，可见其研究程度之深。&lt;/p&gt;\n&lt;p&gt;对于影响门店商品销售的所有关联因素，日本人研究得非常详细。&lt;/p&gt;\n&lt;p&gt;从购物篮海量的数据，书中提出了数种不同角度的分析方法。看完此书，第一感觉是惊叹，从小小的购物篮视角就可以洞察各种影响销售的条件，进而通过分析数据，得出商业决策，感受得到“由小见大”的哲学观，任何看似简单的事情下都拥有不简单的智慧。&lt;/p&gt;\n&lt;p&gt;除此之外，感叹零售行业，经过半个世纪的发展历史(假定从世界上第一家超市1952年诞生开始算起)，已积累如此深的管理智慧，在商业方面从对人的研究（可靠性低）转向对数据的研究（可靠性更高）。又站上了一个全新的高度。&lt;/p&gt;\n&lt;p&gt;从产品竞争层面，再来看看商品竞争的发展阶段。&lt;/p&gt;\n&lt;p&gt;第一阶段：卖方市场（有了就买，商品短缺）&lt;/p&gt;\n&lt;p&gt;第二阶段：功能、价格、稳定基础因素等（开始注重功能、价格、稳定等因素的综合竞争优势）&lt;/p&gt;\n&lt;p&gt;第三阶段：体验性（功能啥的都差不多，开始进行体验性竞争，注重产品）&lt;/p&gt;\n&lt;p&gt;第四阶段：定位（体验性都做的好，开始进行用户定位竞争，比如细分群体、用户认知、注重运营、情怀）&lt;/p&gt;\n&lt;p&gt;第五阶段：接近（你的信息接触到用户，你就赢了）&lt;/p&gt;\n&lt;p&gt;快消类产品由于产品更加同质化，远远比刚发展20多年的互联网行业更早的走入定位时代（早在新千年之前）。看完了本书，更加让我对互联网思维的优越性更加不敢苟同，互联网思维并非是一个全新的认知模式，而是基于互联网的基础特征并结合之前传统行业的经验积累而产生的一种解决问题的理论指导而已。传统行业经过漫长的历史悠久，在产品、商业方面已经积累了丰富的知识与经验。比如丰田的精益生产、快消品的定位竞争、以及本书的购物篮分析。互联网行业从业人员更应该俯下身子，虚心从传统行业取取经。&lt;/p&gt;\n&lt;p&gt;一即一切，一切即一。&lt;/p&gt;\n&#34;,&#34;fileName&#34;:&#34;pi-jiu-yu-niao-bu&#34;,&#34;abstract&#34;:&#34;&lt;p&gt;“啤酒与尿布”的故事诞生于20世纪90年代的美国沃尔玛超市，沃尔玛的超市管理人员分析销售数据事发现了一个令人难以理解的现象：在某些特定的情况下，啤酒与尿布这两件看上去毫无关系的商品会经常出现在同一个购物篮中，经过调查发现，这种现象出现在年轻的父亲身上。&lt;/p&gt;\n&#34;,&#34;title&#34;:&#34;啤酒与尿布&#34;,&#34;tags&#34;:[{&#34;name&#34;:&#34;产品的疆域&#34;,&#34;slug&#34;:&#34;hdz3C1Aj8&#34;,&#34;used&#34;:true,&#34;link&#34;:&#34;https://absir.me/tag/hdz3C1Aj8/&#34;}],&#34;date&#34;:&#34;2016-03-13 15:38:47&#34;,&#34;dateFormat&#34;:&#34;2016-03-13&#34;,&#34;feature&#34;:&#34;&#34;,&#34;link&#34;:&#34;https://absir.me/post/pi-jiu-yu-niao-bu/&#34;,&#34;hideInList&#34;:false,&#34;isTop&#34;:false,&#34;stats&#34;:{&#34;text&#34;:&#34;6 min read&#34;,&#34;time&#34;:340000,&#34;words&#34;:1687,&#34;minutes&#34;:6},&#34;description&#34;:&#34;“啤酒与尿布”的故事诞生于20世纪90年代的美国沃尔玛超市，沃尔玛的超市管理人员分析销售数据事发现了一个令人难以理解的现象：在某些特定的情况下，啤酒与尿布这两件看上去毫无关系的商品会经常出现在同一个购物篮中，经过调查发现，这种现象出现在年轻...&#34;,&#34;toc&#34;:&#34;&lt;ul class=\&#34;markdownIt-TOC\&#34;&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E7%BE%8E%E5%BC%8F%E8%B4%AD%E7%89%A9%E7%AF%AE%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95%E6%B2%83%E5%B0%94%E7%8E%9B%E5%88%86%E6%9E%90%E8%B4%AD%E7%89%A9%E7%AF%AE%E5%86%85%E5%95%86%E5%93%81%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E8%81%94%E4%BF%A1%E6%81%AF\&#34;&gt;美式购物篮分析方法（沃尔玛）：分析购物篮内商品之间的关联信息。&lt;/a&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%95%86%E5%93%81%E9%85%8D%E7%BD%AE%E5%88%86%E6%9E%90\&#34;&gt;商品配置分析&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%AE%A2%E6%88%B7%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90\&#34;&gt;客户需求分析&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E4%BA%A7%E5%93%81%E5%88%86%E6%9E%90\&#34;&gt;产品分析&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E9%94%80%E5%94%AE%E8%B6%8B%E5%8A%BF%E5%88%86%E6%9E%90\&#34;&gt;销售趋势分析&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E6%97%A5%E5%BC%8F%E8%B4%AD%E7%89%A9%E7%AF%AE%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%957-11%E4%BE%BF%E5%88%A9%E5%BA%97%E5%88%86%E6%9E%90%E5%BD%B1%E5%93%8D%E5%95%86%E5%93%81%E9%94%80%E5%94%AE%E7%9A%84%E6%89%80%E6%9C%89%E5%9B%A0%E7%B4%A0\&#34;&gt;日式购物篮分析方法（7-11便利店）：分析影响商品销售的所有因素。&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&#34;},{&#34;content&#34;:&#34;&lt;p&gt;产品经理A:”我为追求极致的用户体验而生”。&lt;/p&gt;\n&lt;p&gt;大佬B:”为了达到这个效果，我们修改了十几版设计图，像素追求达到毫米级”&lt;/p&gt;\n&lt;p&gt;老板C:”把这个头像向右移2像素，等等，向左移动1像素..对,放大一点…”&lt;/p&gt;\n&lt;p&gt;产品经理D:”没有好的用户体验，用户怎么会喜欢你的产品呢？”&lt;/p&gt;\n&lt;!-- more --&gt;\n&lt;p&gt;以上的场景，有没有好熟悉或感同身受？用户体验，这个词随着火热的互联网逐渐知名，经常看到许多产品经理的slogan写着“追求极致的用户体验”，甚至排场十足的发布会，各个大佬也都在狂侃说自己产品体验如何好，为了达到这个效果曾经改了多少版；为了追求毫米级的像素抠了多少次设计稿（比如APP）。身边逐渐升起来一种“没有好的用户体验就无法获得市场”的言论。&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;那么，我提出疑问，用户体验真的那么重要吗？&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;讨论一个问题之前，先明确边界。广义的用户体验包括产品给用户所有的感受（包括功能、外观、操作等一切可以感受的东西）。这样的定义就太过广泛。论证剖析没有意义。本文中的用户体验的范围仅仅局限在表现层（加瑞特在经典书籍《用户体验的要素中》将用户体验的要素分成五个层次，分别是战略层、范围层、结构层、框架层和表现层。），比如外观，交互、排版，包装等。&lt;/p&gt;\n&lt;p&gt;从标题的反问语气，就知道我将在本文论述的观点，用户体验并没有想象中的那么重要。&lt;/p&gt;\n&lt;h2 id=\&#34;1用户体验的重要性取决于用户对用户体验的关注度\&#34;&gt;1.用户体验的重要性取决于用户对用户体验的关注度&lt;/h2&gt;\n&lt;p&gt;用户的需求是不断演进的，正如马斯洛需求层次理论一样，只有低层级需求被基本满足之后，用户对更高级的需求才会凸显出来。&lt;/p&gt;\n&lt;p&gt;（马斯洛需求层次理论：假如一个人同时缺乏食物、安全、爱和尊重，通常对食物的需求量是最强烈的，其它需要则显得不那么重要。此时人的意识几乎全被饥饿所占据，所有能量都被用来 获取食物。在这种极端情况下，人生的全部意义就是吃，其它什么都不重要。只有当人从生理需要的控制下解放出来时，才可能出现更高级的、社会化程度更高的需 要如安全的需要。）&lt;/p&gt;\n&lt;p&gt;克莱顿·克里斯坦森在《创新者的窘境》书中将用户对产品的购买因素分成四个阶段，功能性、可靠性、便捷性、价格。只有当前一个因素被市场基本满足的情况下，用户的关注度才会向下一个关注因素转移。&lt;/p&gt;\n&lt;p&gt;“如果你是做H网，你是将时间更多的拿去找片，还是关注用户体验？”&lt;/p&gt;\n&lt;p&gt;用户的需求关注点受制于市场的需求满足现状。比如手机、移动互联网 等行业的红海竞争，追求用户体验并无错误。但是如果你目前进行的是蓝海市场的开拓…请！请！请！先把用户体验的重要性降低吧！&lt;/p&gt;\n&lt;p&gt;用户体验更应该是博弈，是在所有产品属性中的达到的一种平衡。 另外，对任何东西的极致意味着偏颇与失衡。极致的用户体验，你时间真够多的！&lt;/p&gt;\n&lt;p&gt;理想的情况下，产品从用户出发&lt;/p&gt;\n&lt;p&gt;实际的情况下，产品从市场出发&lt;/p&gt;\n&lt;p&gt;用户体验并不一定非常重要，取决于市场的竞争现状。&lt;/p&gt;\n&lt;h2 id=\&#34;2用户体验的重要性取决于当前的产品阶段\&#34;&gt;2.用户体验的重要性取决于当前的产品阶段&lt;/h2&gt;\n&lt;p&gt;丰田的精益思维方法论逐渐流传开来，但是产品瀑布流方法论（发现机会-定义产品-研发产品-上线）仍然以各种变体在传统的产品研发流程中活跃。&lt;/p&gt;\n&lt;p&gt;精益思想的精髓是杜绝浪费，接受缺陷。核心哲学是“我TMD也不知道用户需求是啥啊！边走边看呗”&lt;/p&gt;\n&lt;p&gt;“不知道这个需求是不是用户需要的，那怎么办？调查呗！用户心口不一怎么办？那就测试呗！那要把功能做完才测试吗？做一点先看看,不能浪费啊…”&lt;/p&gt;\n&lt;p&gt;注重迭代，先做一点，用户觉得好，在把它完善。&lt;/p&gt;\n&lt;p&gt;传统的瀑布流思维是掌控。核心前提是“我知道用户的需求！，我知道用户的需求！”&lt;/p&gt;\n&lt;p&gt;“这个需求是用户要的，对，你实现吧！一定要完美”&lt;/p&gt;\n&lt;p&gt;注重完美，哪怕多花点时间，一步做好，嗯，要完美的！&lt;/p&gt;\n&lt;p&gt;有一句话，不断的学习，让我逐渐发现我是如此无知。或许也可以引申到产品经理。不断的成长，我才发现我对用户需求一无所知。&lt;/p&gt;\n&lt;p&gt;产品发展过程分成三个阶段（从精益思想总结）。&lt;/p&gt;\n&lt;h3 id=\&#34;1需求的验证阶段\&#34;&gt;1.需求的验证阶段&lt;/h3&gt;\n&lt;p&gt;验证用户是否有你要解决的需求，比如调查用户是否有约炮的需求。&lt;/p&gt;\n&lt;h3 id=\&#34;2解决方案验证阶段\&#34;&gt;2.解决方案验证阶段&lt;/h3&gt;\n&lt;p&gt;验证你的解决方案是否被用户接受，约炮的需求解决方案到底是陌陌好呢？还是UBER好呢？&lt;/p&gt;\n&lt;h3 id=\&#34;3产品的发展阶段\&#34;&gt;3.产品的发展阶段&lt;/h3&gt;\n&lt;p&gt;需求和解决方案都是OK的，进入产品发展期，关注更多功能、体验层面的东西。&lt;/p&gt;\n&lt;p&gt;从上面可以看出，第一阶段和第二阶段用户体验并不是那么重要！需要真正重视用户体验的是第三阶段。&lt;/p&gt;\n&lt;p&gt;所以，什么阶段就该做什么阶段的事吧！&lt;/p&gt;\n&lt;h2 id=\&#34;总结\&#34;&gt;总结&lt;/h2&gt;\n&lt;p&gt;用户体验并不是决定产品是否被接受的唯一因素。价格、可获取性、稳定性、及时性等很多因素和它同等重要。产品被用户接受的原因是其本身多个属性的协调与博弈的结果。&lt;/p&gt;\n&lt;p&gt;在产品的不同阶段，对用户体验的关注度应该不一样。只有在需求和解决方法初步得到验证之后，才应该更加关注用户体验。&lt;/p&gt;\n&lt;p&gt;这里或许会有人反驳，你前期不重视用户体验，产品怎么会有人用呢？（我想说的是，对用户体验的关注度降低，不代表不关注，而是对用户体验持有不追求出彩，只要求不明显降分的态度）。&lt;/p&gt;\n&lt;h3 id=\&#34;我关于对用户体验的建议\&#34;&gt;我关于对用户体验的建议&lt;/h3&gt;\n&lt;p&gt;• 不要舍本逐末&lt;/p&gt;\n&lt;p&gt;• 不要过早优化&lt;/p&gt;\n&lt;p&gt;• 不要主观臆想&lt;/p&gt;\n&lt;p&gt;• 不要事倍功半&lt;/p&gt;\n&lt;p&gt;• 不要完美主义&lt;/p&gt;\n&#34;,&#34;fileName&#34;:&#34;yong-hu-ti-yan-zhen-de-chong-yao-ma&#34;,&#34;abstract&#34;:&#34;&lt;p&gt;产品经理A:”我为追求极致的用户体验而生”。&lt;/p&gt;\n&lt;p&gt;大佬B:”为了达到这个效果，我们修改了十几版设计图，像素追求达到毫米级”&lt;/p&gt;\n&lt;p&gt;老板C:”把这个头像向右移2像素，等等，向左移动1像素..对,放大一点…”&lt;/p&gt;\n&lt;p&gt;产品经理D:”没有好的用户体验，用户怎么会喜欢你的产品呢？”&lt;/p&gt;\n&#34;,&#34;title&#34;:&#34;用户体验真的重要吗？&#34;,&#34;tags&#34;:[{&#34;name&#34;:&#34;产品的疆域&#34;,&#34;slug&#34;:&#34;hdz3C1Aj8&#34;,&#34;used&#34;:true,&#34;link&#34;:&#34;https://absir.me/tag/hdz3C1Aj8/&#34;}],&#34;date&#34;:&#34;2016-03-06 13:19:01&#34;,&#34;dateFormat&#34;:&#34;2016-03-06&#34;,&#34;feature&#34;:&#34;&#34;,&#34;link&#34;:&#34;https://absir.me/post/yong-hu-ti-yan-zhen-de-chong-yao-ma/&#34;,&#34;hideInList&#34;:false,&#34;isTop&#34;:false,&#34;stats&#34;:{&#34;text&#34;:&#34;6 min read&#34;,&#34;time&#34;:348000,&#34;words&#34;:1729,&#34;minutes&#34;:6},&#34;description&#34;:&#34;产品经理A:”我为追求极致的用户体验而生”。\n大佬B:”为了达到这个效果，我们修改了十几版设计图，像素追求达到毫米级”\n老板C:”把这个头像向右移2像素，等等，向左移动1像素..对,放大一点…”\n产品经理D:”没有好的用户体验，用户怎么会喜...&#34;,&#34;toc&#34;:&#34;&lt;ul class=\&#34;markdownIt-TOC\&#34;&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#1%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7%E5%8F%96%E5%86%B3%E4%BA%8E%E7%94%A8%E6%88%B7%E5%AF%B9%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E7%9A%84%E5%85%B3%E6%B3%A8%E5%BA%A6\&#34;&gt;1.用户体验的重要性取决于用户对用户体验的关注度&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#2%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7%E5%8F%96%E5%86%B3%E4%BA%8E%E5%BD%93%E5%89%8D%E7%9A%84%E4%BA%A7%E5%93%81%E9%98%B6%E6%AE%B5\&#34;&gt;2.用户体验的重要性取决于当前的产品阶段&lt;/a&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#1%E9%9C%80%E6%B1%82%E7%9A%84%E9%AA%8C%E8%AF%81%E9%98%B6%E6%AE%B5\&#34;&gt;1.需求的验证阶段&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E9%AA%8C%E8%AF%81%E9%98%B6%E6%AE%B5\&#34;&gt;2.解决方案验证阶段&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#3%E4%BA%A7%E5%93%81%E7%9A%84%E5%8F%91%E5%B1%95%E9%98%B6%E6%AE%B5\&#34;&gt;3.产品的发展阶段&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E6%80%BB%E7%BB%93\&#34;&gt;总结&lt;/a&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E6%88%91%E5%85%B3%E4%BA%8E%E5%AF%B9%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E7%9A%84%E5%BB%BA%E8%AE%AE\&#34;&gt;我关于对用户体验的建议&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&#34;},{&#34;content&#34;:&#34;&lt;p&gt;&lt;strong&gt;管理就是解决资源的调配问题的一门学科。&lt;/strong&gt; 我知道就这一句话回答完了你肯定不尽兴，下面我将从唯物史观的角度来聊一聊管理需求的演进。&lt;/p&gt;\n&lt;p&gt;翻开一万年前的人类发展史，有人的地方，便会逐渐形成组织。有组织的地方，便需要管理。所以，从一定维度来说，管理发展史几乎与人类发展史同样漫长。&lt;/p&gt;\n&lt;!-- more --&gt;\n&lt;h2 id=\&#34;启蒙前时代-管理主要依靠君授神权和宗教信仰\&#34;&gt;启蒙前时代— 管理主要依靠君授神权和宗教信仰&lt;/h2&gt;\n&lt;p&gt;在工业革命之前，宗教、国家是仅有的两种大型组织，在这种通过虔诚的信仰和君授神权的集权制度中，管理是以伦理的方式进行的，没有，也没有必要有正式的管理体系。漫长的农业社会无法催生出更多的组织，自然，管理学仅仅有着一些支离破碎的萌芽。&lt;/p&gt;\n&lt;p&gt;在这个时代，人类是无知的，文明是愚昧的。社会的主流价值观受到宗教、国家洗礼。&lt;/p&gt;\n&lt;h2 id=\&#34;启蒙时代管理学更多的关注机器\&#34;&gt;启蒙时代–管理学更多的关注机器&lt;/h2&gt;\n&lt;p&gt;公元14世纪开始，文艺复兴运动唤醒了人们理性思考的革命。1765年瓦特发明了蒸汽机,它除了提供了更廉价的动力之外，还唤醒了人类社会上又一轮的认知革命，引发了工业革命的浪潮。推动了更多工厂的出现，从而衍生了管理人员的需求，管理学正式进入启蒙时代。&lt;/p&gt;\n&lt;p&gt;工业革命中前期，管理更多的还是与技术、行业融合在一起，过多地强调技术。这是管理学的发展不可跳跃的必经演进路线，是农业社会向工业社会转型所必须经历的时代。早期的管理种子开始逐渐发芽生长，为科学管理的思想奠定了基础。&lt;/p&gt;\n&lt;h2 id=\&#34;科学管理时代管理学成为一门完善的科学\&#34;&gt;科学管理时代–管理学成为一门完善的科学&lt;/h2&gt;\n&lt;p&gt;19世纪中后叶，工业革命发展到一个全新的阶段。正值美国工业舞台上小公司向大规模、一体化转变的历史背景下，泰勒推动了这次转变。为管理成为一门独立的科学提供了可信度。他对效率的强调成为那是乃至当代管理的一种主流价值观，并且后继很多人接受并完善了科学管理的思想。毫无疑问，泰勒是管理思想的发展史上一颗璀璨的巨星。自然也实至名归“科学管理之父”的桂冠。管理学科迈入“科学管理时代“。&lt;/p&gt;\n&lt;p&gt;科学管理时代管理思想逐步开花结果，与各种学科珠联璧合，管理学科逐渐变成了一门完善的科学。&lt;/p&gt;\n&lt;h2 id=\&#34;社会人时代管理学更多的关注人\&#34;&gt;社会人时代–管理学更多的关注人&lt;/h2&gt;\n&lt;p&gt;随着工业社会的逐步发展，社会的经济水平不断提升，人们的需求层次也逐渐发展，这个时候，管理中金钱激励的作用逐渐减小，所以管理学研究逐渐迈入了研究人的领域。这就是管理思想发展史的“社会人时代“。导思想是实现效率和工作场所和谐的关键在于人际关系。&lt;/p&gt;\n&lt;h2 id=\&#34;现代关注战略\&#34;&gt;现代–关注战略&lt;/h2&gt;\n&lt;p&gt;而在现代，基础的管理制度已经建立。企业能不能活下来的关键瓶颈已经不是员工的效率高不高的问题，而是企业战略和方向上正确性的问题，所以现代管理思想强调领导对目标明确的组织的引导作用，比如战略制定。&lt;/p&gt;\n&lt;p&gt;##题后话&lt;/p&gt;\n&lt;p&gt;1.管理学发展，我怎么看？&lt;br&gt;\n从上面可以看出，不断发展的技术、经济、文化、政治环境都会逐渐影响管理需求的演变。它没有正确与否，只有与时代适应与否。管理的需求是多样化的，动态的。但是管理始终解决的都是人类最古老的问题-资源的配置问题。&lt;/p&gt;\n&lt;p&gt;在时代的发展中，个人的独立意识逐渐苏醒，个人需求层次逐渐提高，这些都导致个体在协作关系中的需求逐渐转变，自然调配资源协作关系的艺术-管理学也需要与时俱进。从关注机器到关注人，从薪资制度到福利关怀。&lt;/p&gt;\n&lt;p&gt;我相信，随着个人意识与个人需求层次逐渐提高，企业的雇佣制度逐渐会转变成合伙制度（最大程度的激励个体主观能动性）。从企业强势向个人强势转变，也就是罗振宇说的手艺人时代。从历史的漫漫长河来看，这也是个体对外控制能力逐渐变强的过程，农业时代依靠天吃饭，工业时代依靠工厂吃饭，而即将到来的未来时代依靠个体吃饭。&lt;/p&gt;\n&lt;p&gt;阅读书籍：《西方管理思想史》 丹尼尔·A·雷恩&lt;/p&gt;\n&#34;,&#34;fileName&#34;:&#34;what-is-mangement&#34;,&#34;abstract&#34;:&#34;&lt;p&gt;&lt;strong&gt;管理就是解决资源的调配问题的一门学科。&lt;/strong&gt; 我知道就这一句话回答完了你肯定不尽兴，下面我将从唯物史观的角度来聊一聊管理需求的演进。&lt;/p&gt;\n&lt;p&gt;翻开一万年前的人类发展史，有人的地方，便会逐渐形成组织。有组织的地方，便需要管理。所以，从一定维度来说，管理发展史几乎与人类发展史同样漫长。&lt;/p&gt;\n&#34;,&#34;title&#34;:&#34;什么是管理&#34;,&#34;tags&#34;:[{&#34;name&#34;:&#34;管理的疆域&#34;,&#34;slug&#34;:&#34;IeBC9X57b&#34;,&#34;used&#34;:true,&#34;link&#34;:&#34;https://absir.me/tag/IeBC9X57b/&#34;}],&#34;date&#34;:&#34;2016-02-28 12:36:39&#34;,&#34;dateFormat&#34;:&#34;2016-02-28&#34;,&#34;feature&#34;:&#34;&#34;,&#34;link&#34;:&#34;https://absir.me/post/what-is-mangement/&#34;,&#34;hideInList&#34;:false,&#34;isTop&#34;:false,&#34;stats&#34;:{&#34;text&#34;:&#34;5 min read&#34;,&#34;time&#34;:260000,&#34;words&#34;:1297,&#34;minutes&#34;:5},&#34;description&#34;:&#34;管理就是解决资源的调配问题的一门学科。 我知道就这一句话回答完了你肯定不尽兴，下面我将从唯物史观的角度来聊一聊管理需求的演进。\n翻开一万年前的人类发展史，有人的地方，便会逐渐形成组织。有组织的地方，便需要管理。所以，从一定维度来说，管理发展...&#34;,&#34;toc&#34;:&#34;&lt;ul class=\&#34;markdownIt-TOC\&#34;&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%90%AF%E8%92%99%E5%89%8D%E6%97%B6%E4%BB%A3-%E7%AE%A1%E7%90%86%E4%B8%BB%E8%A6%81%E4%BE%9D%E9%9D%A0%E5%90%9B%E6%8E%88%E7%A5%9E%E6%9D%83%E5%92%8C%E5%AE%97%E6%95%99%E4%BF%A1%E4%BB%B0\&#34;&gt;启蒙前时代— 管理主要依靠君授神权和宗教信仰&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%90%AF%E8%92%99%E6%97%B6%E4%BB%A3%E7%AE%A1%E7%90%86%E5%AD%A6%E6%9B%B4%E5%A4%9A%E7%9A%84%E5%85%B3%E6%B3%A8%E6%9C%BA%E5%99%A8\&#34;&gt;启蒙时代–管理学更多的关注机器&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E7%A7%91%E5%AD%A6%E7%AE%A1%E7%90%86%E6%97%B6%E4%BB%A3%E7%AE%A1%E7%90%86%E5%AD%A6%E6%88%90%E4%B8%BA%E4%B8%80%E9%97%A8%E5%AE%8C%E5%96%84%E7%9A%84%E7%A7%91%E5%AD%A6\&#34;&gt;科学管理时代–管理学成为一门完善的科学&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E7%A4%BE%E4%BC%9A%E4%BA%BA%E6%97%B6%E4%BB%A3%E7%AE%A1%E7%90%86%E5%AD%A6%E6%9B%B4%E5%A4%9A%E7%9A%84%E5%85%B3%E6%B3%A8%E4%BA%BA\&#34;&gt;社会人时代–管理学更多的关注人&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E7%8E%B0%E4%BB%A3%E5%85%B3%E6%B3%A8%E6%88%98%E7%95%A5\&#34;&gt;现代–关注战略&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&#34;}]";
+  // var json = escape.substr(1, escape.length - 2);
+  // var datas = json.split(',');
+  // for (let i=0; i < datas.length; i++) {
+  //   let item = datas[i];
+  //   let attrs = item.split('34;:&#34')
+  //   debugger
+  //   console.log(datas[i])
+  // }
+  let escapeMap = new Map();
+  escapeMap.set('&#34;', '"');
+  escapeMap.set('&gt;', '>');
+  escapeMap.set('&#39;', "'");
+  escapeMap.set('&lt;', '<');
+  escapeMap.set('&quot;', '"');
+  escapeMap.set('&amp;', '&');
+</script> -->
+
+
+
 </html>
