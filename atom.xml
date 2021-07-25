@@ -2,14 +2,32 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://absir.me</id>
     <title>AB先生说</title>
-    <updated>2020-12-20T08:29:28.092Z</updated>
+    <updated>2021-07-25T15:56:59.813Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://absir.me"/>
     <link rel="self" href="https://absir.me/atom.xml"/>
     <subtitle>一个产品人，学习者。</subtitle>
     <logo>https://absir.me/images/avatar.png</logo>
     <icon>https://absir.me/favicon.ico</icon>
-    <rights>All rights reserved 2020, AB先生说</rights>
+    <rights>All rights reserved 2021, AB先生说</rights>
+    <entry>
+        <title type="html"><![CDATA[放弃与坚守]]></title>
+        <id>https://absir.me/post/fang-qi-yu-jian-shou/</id>
+        <link href="https://absir.me/post/fang-qi-yu-jian-shou/">
+        </link>
+        <updated>2021-07-25T15:36:37.000Z</updated>
+        <content type="html"><![CDATA[<p>最近半年已来，各种心境混杂，怀念、焦虑、痛苦、幸福、自我怀疑、自我肯定轮番登场，又此消彼长。如果要用一个词来描述过去的半年，那么就是：<strong>挣扎</strong>。</p>
+<p>和别人聊天，我说我最近半年仿佛回到了高三岁月，没心思体会美与幸福，注意力全在当下的目标，为了未来而挣扎，而努力。至于为啥用挣扎这个词语，是因为半年来，我的确还没有折腾出什么名堂。总觉得希望在眼前，总觉得可以起高楼，但现实总是跟不上爱做梦的大脑。</p>
+<p>这样也好，我总结为，如果现在不吃蜕变的苦，之后就要吃内卷的苦，还是年轻时苦一点好吧。</p>
+<p>只要我能抗得住，只要我能不灰心，只要我能理性的往前走...那么何愁看不到希望？只是时间的馈赠何时到来罢了。希望来的快一点。</p>
+<p>我一直在想，我想要的生活是什么？我要做什么努力，才能过上我想过的生活？因此没有更好的选择，只有这条艰难的路，那么...就走好了。</p>
+<p>过去有很多美好故事，但请不要怀念。<br>
+未来想象有很多幸福，但也要少做梦。</p>
+<p>努力活在当下吧。不焦虑未来的恐惧，也不沉浸过去的情绪。平常心境，穿针走线，编织当下的生活。</p>
+<p>没有放弃，只有理性的坚持。</p>
+<p>20210725 23:00 @深圳宝安</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[豁然开朗]]></title>
         <id>https://absir.me/post/2020-12-20/</id>
