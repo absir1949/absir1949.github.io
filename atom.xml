@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://absir.me</id>
     <title>AB先生说</title>
-    <updated>2021-07-25T15:56:59.813Z</updated>
+    <updated>2021-09-26T15:32:41.995Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://absir.me"/>
     <link rel="self" href="https://absir.me/atom.xml"/>
@@ -10,6 +10,19 @@
     <logo>https://absir.me/images/avatar.png</logo>
     <icon>https://absir.me/favicon.ico</icon>
     <rights>All rights reserved 2021, AB先生说</rights>
+    <entry>
+        <title type="html"><![CDATA[正当时]]></title>
+        <id>https://absir.me/post/zheng-dang-shi/</id>
+        <link href="https://absir.me/post/zheng-dang-shi/">
+        </link>
+        <updated>2021-09-26T15:17:26.000Z</updated>
+        <content type="html"><![CDATA[<p>早上听了一首歌，听哭了。不信邪，重听第二遍，依旧。</p>
+<p>年纪越大，眼里沙子越多，想起来四五年前还想做个纯粹理性人，现在想想当时太傻了。</p>
+<p>音乐软件破了几个月了（什么破理由？），在苦难的时光里，发现还是需要用音乐去消解情绪，抚慰心灵，释放压力，去<strong>体会人性</strong>。</p>
+<p>什么是人性？嬉笑怒骂、快意恩仇、哭与闹、乐与恼，这才是人。</p>
+<p>感激自己是个人。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[放弃与坚守]]></title>
         <id>https://absir.me/post/fang-qi-yu-jian-shou/</id>
